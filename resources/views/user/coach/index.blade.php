@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Coach</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('user.coach')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('profile.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Coaches</li>
+                        <li class="breadcrumb-item text-muted">{{__('profile.coaches')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -52,7 +52,7 @@
                 <!--begin::Heading-->
                 <div class="d-flex flex-wrap flex-stack mb-6">
                     <!--begin::Title-->
-                    <h3 class="fw-bold my-2">Coaches
+                    <h3 class="fw-bold my-2">{{__('profile.coaches')}}
                     <span class="fs-6 fw-semibold ms-1">({{$coaches->count()}})</span></h3>
                     <!--end::Title-->
                     <!--begin::Controls-->
@@ -65,13 +65,13 @@
                                     <i class="ki-duotone ki-filter fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
-                                    </i>Filter
+                                    </i>{{__('user.filter')}}
                                 </button>
                                 <!--begin::Menu 1-->
                                 <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true" id="kt-toolbar-filter">
                                     <!--begin::Header-->
                                     <div class="px-7 py-5">
-                                        <div class="fs-4 text-dark fw-bold">Filter Options</div>
+                                        <div class="fs-4 text-dark fw-bold">{{__('user.filter option')}}</div>
                                     </div>
                                     <!--end::Header-->
                                     <!--begin::Separator-->
@@ -83,10 +83,10 @@
                                             <!--begin::Input group-->
                                             <div class="mb-10">
                                                 <!--begin::Label-->
-                                                <label class="form-label fs-5 fw-semibold mb-3">Type:</label>
+                                                <label class="form-label fs-5 fw-semibold mb-3">{{__('user.type')}} :</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
-                                                <select name="type" class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select Type" data-allow-clear="true" data-kt-customer-table-filter="month" data-dropdown-parent="#kt-toolbar-filter">
+                                                <select name="type" class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="{{__('user.select type')}}" data-allow-clear="true" data-kt-customer-table-filter="month" data-dropdown-parent="#kt-toolbar-filter">
                                                     <option></option>
                                                     @forelse ($coaches as $coach)
                                                         <option value="{{$coach->type}}" {{ old('type', request()->input('type')) == $coach->type ? 'selected' : '' }}>{{$coach->type}}</option>
@@ -99,8 +99,8 @@
                                             <!--end::Input group-->
                                             <!--begin::Actions-->
                                             <div class="d-flex justify-content-end">
-                                                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true" data-kt-customer-table-filter="reset">Reset</button>
-                                                <button type="submit" class="btn btn-primary" data-kt-menu-dismiss="true" data-kt-customer-table-filter="filter">Apply</button>
+                                                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true" data-kt-customer-table-filter="reset">{{__('user.reset')}}</button>
+                                                <button type="submit" class="btn btn-primary" data-kt-menu-dismiss="true" data-kt-customer-table-filter="filter">{{__('user.apply')}}</button>
                                             </div>
                                             <!--end::Actions-->
                                         </div>

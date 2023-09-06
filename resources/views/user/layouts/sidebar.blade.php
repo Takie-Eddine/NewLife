@@ -44,7 +44,7 @@
                             </span>
                         </span>
                         <a class="menu-link" href="{{route('admin.dashboard')}}">
-                            <span class="menu-title">Dashboards</span>
+                            <span class="menu-title">{{__('sidebar.dashboard')}}</span>
                         </a>
                     </span>
                 </div>
@@ -62,7 +62,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Coaches</span>
+                        <span class="menu-title">{{__('sidebar.coaches')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -71,7 +71,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Coaches</span>
+                                <span class="menu-title">{{__('sidebar.coaches')}}</span>
                             </a>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Programs</span>
+                        <span class="menu-title">{{__('sidebar.programs')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -101,7 +101,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Programs</span>
+                                <span class="menu-title">{{__('sidebar.programs')}}</span>
                             </a>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Uploads</span>
+                        <span class="menu-title">{{__('sidebar.uploads')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -130,7 +130,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Medical Tests</span>
+                                <span class="menu-title">{{__('sidebar.medical tests')}}</span>
                             </a>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Facilities </span>
+                                <span class="menu-title">{{__('sidebar.facilities')}} </span>
                             </a>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Food</span>
+                        <span class="menu-title">{{__('sidebar.food')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -240,7 +240,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Foods</span>
+                                <span class="menu-title">{{__('sidebar.food')}}</span>
                             </a>
                         </div>
                     </div>
@@ -260,7 +260,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Inbox</span>
+                        <span class="menu-title">{{__('sidebar.inbox')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -324,7 +324,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Chat</span>
+                        <span class="menu-title">{{__('sidebar.chat')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -385,7 +385,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Calendar</span>
+                        <span class="menu-title">{{__('sidebar.calender')}}</span>
                     </a>
                     <!--end:Menu link-->
                 </div>
@@ -401,7 +401,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Contacts</span>
+                        <span class="menu-title">{{__('sidebar.contacts')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -410,7 +410,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Contacts</span>
+                                <span class="menu-title">{{__('sidebar.contacts')}}</span>
                             </a>
                         </div>
                         {{-- <div class="menu-item">

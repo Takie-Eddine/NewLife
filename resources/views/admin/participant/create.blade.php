@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Participant</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.participant')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,7 +34,7 @@
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.participants')}}" class="text-muted text-hover-primary">Participants</a>
+                            <a href="{{route('admin.participants')}}" class="text-muted text-hover-primary">{{__('admin.participants')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -43,7 +43,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Add Participant</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.add participant')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -64,7 +64,7 @@
                         <!--begin::Card header-->
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_signin_method">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Sign-in Method *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.sign in method')}} *</h3>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@
                                 <div class="d-flex flex-wrap align-items-center">
                                     <!--begin::Label-->
                                     <div id="kt_signin_email">
-                                        <div class="fs-6 fw-bold mb-1">Email Address, Username, Password</div>
+                                        <div class="fs-6 fw-bold mb-1">{{__('admin.email address')}}, {{__('admin.username')}}, {{__('admin.password')}}</div>
                                         <div class="fw-semibold text-gray-600"></div>
                                     </div>
                                     <!--end::Label-->
@@ -97,34 +97,34 @@
                                             <div class="row mb-6">
                                                 <div class="col-lg-6 mb-4 mb-lg-0">
                                                     <div class="fv-row mb-0">
-                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">Enter  Email Address</label>
-                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="Email Address" name="email" value="{{old('email')}}" required/>
+                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">{{__('admin.enter email')}}</label>
+                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="{{__('admin.email address')}}" name="email" value="{{old('email')}}" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> Username</label>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="Username" required id="confirmemailpassword" value="{{old('name')}}" />
+                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.username')}}</label>
+                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="{{__('admin.username')}}" required id="confirmemailpassword" value="{{old('name')}}" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> Password</label>
-                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Password" name="password" id="newpassword" required/>
+                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.password')}}</label>
+                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.password')}}" name="password" id="newpassword" required/>
                                                     </div>
                                                 </div>
-                                                <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
+                                                <div class="form-text mb-5">{{__('admin.password must be at least 8 character and contain symbols')}}</div>
                                             </div>
                                             <div class="d-flex">
                                                 {{-- <button id="" type="submit" class="btn btn-primary me-2 px-6">Create </button> --}}
-                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
+                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6"> {{__('admin.cancel')}}</button>
                                             </div>
                                         <!--end::Form-->
                                     </div>
                                     <!--end::Edit-->
                                     <!--begin::Action-->
                                     <div id="kt_signin_email_button" class="ms-auto">
-                                        <button class="btn btn-light btn-active-light-primary">Create </button>
+                                        <button class="btn btn-light btn-active-light-primary">{{__('admin.create')}} </button>
                                     </div>
                                     <!--end::Action-->
                                 </div>
@@ -193,7 +193,7 @@
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <!--begin::Card title-->
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Participant Details *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.participant details')}} *</h3>
                             </div>
 
                             <!--end::Card title-->

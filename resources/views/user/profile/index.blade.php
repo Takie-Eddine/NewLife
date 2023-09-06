@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Account Overview</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('profile.account overview')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('profile.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Account</li>
+                        <li class="breadcrumb-item text-muted">{{__('profile.account')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -154,11 +154,11 @@
                     <div class="card-header cursor-pointer">
                         <!--begin::Card title-->
                         <div class="card-title m-0">
-                            <h3 class="fw-bold m-0">Profile Details</h3>
+                            <h3 class="fw-bold m-0">{{__('profile.profile details')}}</h3>
                         </div>
                         <!--end::Card title-->
                         <!--begin::Action-->
-                        <a href="{{route('user.profile.edit',$user->id)}}" class="btn btn-sm btn-primary align-self-center">Edit Profile</a>
+                        <a href="{{route('user.profile.edit',$user->id)}}" class="btn btn-sm btn-primary align-self-center">{{__('profile.edit profile')}}</a>
                         <!--end::Action-->
                     </div>
                     <!--begin::Card header-->
@@ -167,7 +167,7 @@
                         <!--begin::Row-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Full Name</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.full name')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -179,11 +179,11 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Role</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.plan')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
-                                <span class="fw-semibold text-gray-800 fs-6">Keenthemes</span>
+                                <span class="fw-semibold text-gray-800 fs-6">{{$user->plan->name}}</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -191,19 +191,19 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Contact Phone
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.contact phone')}}
                             <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
-                                <i class="ki-duotone ki-information fs-7">
+                                {{-- <i class="ki-duotone ki-information fs-7">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
                                     <span class="path3"></span>
-                                </i>
+                                </i> --}}
                             </span></label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 d-flex align-items-center">
                                 <span class="fw-bold fs-6 text-gray-800 me-2">{{$user->profile->phone}}</span>
-                                <span class="badge badge-success">Verified</span>
+                                {{-- <span class="badge badge-success">Verified</span> --}}
                             </div>
                             <!--end::Col-->
                         </div>
@@ -211,7 +211,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Birthday</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.birthday')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -223,7 +223,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Country
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.country')}}
                             <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
                                 <i class="ki-duotone ki-information fs-7">
                                     <span class="path1"></span>
@@ -242,17 +242,17 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Communication</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.communication')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
-                                <span class="fw-bold fs-6 text-gray-800">Email, Phone</span>
+                                <span class="fw-bold fs-6 text-gray-800">{{__('profile.email')}}, {{__('profile.phone')}}</span>
                             </div>
                             <!--end::Col-->
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-10">
+                        {{-- <div class="row mb-10">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">Allow Changes</label>
                             <!--begin::Label-->
@@ -261,7 +261,7 @@
                                 <span class="fw-semibold fs-6 text-gray-800">Yes</span>
                             </div>
                             <!--begin::Label-->
-                        </div>
+                        </div> --}}
                         <!--end::Input group-->
                         <!--begin::Notice-->
                         <!--end::Notice-->

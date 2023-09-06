@@ -38,18 +38,18 @@
                         <!--begin::Heading-->
                         <div class="text-center mb-10">
                             <!--begin::Title-->
-                            <h1 class="text-dark fw-bolder mb-3">Setup New Password</h1>
+                            <h1 class="text-dark fw-bolder mb-3">{{__('resetpassword.setup new password')}}</h1>
                             <!--end::Title-->
                             <!--begin::Link-->
-                            <div class="text-gray-500 fw-semibold fs-6">Have you already reset the password ?
-                            <a href="{{route('login')}}" class="link-primary fw-bold">Sign in</a></div>
+                            <div class="text-gray-500 fw-semibold fs-6">{{__('resetpassword.have you already reset the password')}}
+                            <a href="{{route('login')}}" class="link-primary fw-bold">{{__('resetpassword.sign in')}}</a></div>
                             <!--end::Link-->
                         </div>
                         <input type="hidden" name="token" value="{{ $request->route('token') }}">
                         <!--begin::Heading-->
                         <!--begin::Input group-->
                         <div class="fv-row mb-8">
-                            <input type="email" placeholder="Email" name="email" value="{{old('email', $request->email)}}" required autofocus autocomplete="username" class="form-control bg-transparent" />
+                            <input type="email" placeholder="{{__('resetpassword.email')}}" name="email" value="{{old('email', $request->email)}}" required autofocus autocomplete="username" class="form-control bg-transparent" />
                         </div>
                         <div class="fv-row mb-8" data-kt-password-meter="true">
 
@@ -57,7 +57,7 @@
                             <div class="mb-1">
                                 <!--begin::Input wrapper-->
                                 <div class="position-relative mb-3">
-                                    <input class="form-control bg-transparent" type="password" placeholder="Password" name="password" required autocomplete="new-password" />
+                                    <input class="form-control bg-transparent" type="password" placeholder="{{__('resetpassword.password')}}" name="password" required autocomplete="new-password" />
                                     <span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
                                         <i class="ki-duotone ki-eye-slash fs-2"></i>
                                         <i class="ki-duotone ki-eye fs-2 d-none"></i>
@@ -75,14 +75,14 @@
                             </div>
                             <!--end::Wrapper-->
                             <!--begin::Hint-->
-                            <div class="text-muted">Use 8 or more characters with a mix of letters, numbers & symbols.</div>
+                            <div class="text-muted">{{__('resetpassword.use 8 or more characters with a mix of letters, numbers & symbols')}}</div>
                             <!--end::Hint-->
                         </div>
                         <!--end::Input group=-->
                         <!--end::Input group=-->
                         <div class="fv-row mb-8">
                             <!--begin::Repeat Password-->
-                            <input type="password" placeholder="Repeat Password" name="password_confirmation" required autocomplete="new-password" class="form-control bg-transparent" />
+                            <input type="password" placeholder="{{__('resetpassword.repeat password')}}" name="password_confirmation" required autocomplete="new-password" class="form-control bg-transparent" />
                             <!--end::Repeat Password-->
                         </div>
                         <!--end::Input group=-->
@@ -99,7 +99,7 @@
                         <div class="d-grid mb-10">
                             <button type="submit" id="kt_new_password_submit" class="btn btn-primary">
                                 <!--begin::Indicator label-->
-                                <span class="indicator-label">Submit</span>
+                                <span class="indicator-label">{{__('resetpassword.submit')}}</span>
                                 <!--end::Indicator label-->
                                 <!--begin::Indicator progress-->
                                 <span class="indicator-progress">Please wait...
@@ -181,9 +181,9 @@
                     <!--end::Languages-->
                     <!--begin::Links-->
                     <div class="d-flex fw-semibold text-primary fs-base gap-5">
-                        <a href="../../demo1/dist/pages/team.html" target="_blank">Terms</a>
-                        <a href="../../demo1/dist/pages/pricing/column.html" target="_blank">Plans</a>
-                        <a href="../../demo1/dist/pages/contact.html" target="_blank">Contact Us</a>
+                        <a href="https://newlifeprog.net/page/policy" target="_blank">{{__('login.term')}}</a>
+                        <a href="https://newlifeprog.net/Programs" target="_blank">{{__('login.program')}}</a>
+                        <a href="https://newlifeprog.net/Contactus" target="_blank">{{__('login.contact us')}}</a>
                     </div>
                     <!--end::Links-->
                 </div>

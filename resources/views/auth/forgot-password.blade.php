@@ -23,19 +23,19 @@
                     <form class="form w-100" novalidate="novalidate"  data-kt-redirect-url="{{route('password.email')}}" action="{{route('admin.password.email')}}" method="POST">
                         @csrf
                         <div class="text-center mb-10">
-                            <h1 class="text-dark fw-bolder mb-3">Forgot Password ?</h1>
-                            <div class="text-gray-500 fw-semibold fs-6">Enter your email to reset your password.</div>
+                            <h1 class="text-dark fw-bolder mb-3">{{__('forgotpassword.forgot password')}}</h1>
+                            <div class="text-gray-500 fw-semibold fs-6">{{__('forgotpassword.Enter your email to reset your password')}}</div>
                         </div>
                         <div class="fv-row mb-8">
-                            <input type="email" placeholder="Email" name="email" value="{{old('email')}}" autocomplete="off" class="form-control bg-transparent"  required/>
+                            <input type="email" placeholder="{{__('forgotpassword.email')}}" name="email" value="{{old('email')}}" autocomplete="off" class="form-control bg-transparent"  required/>
                         </div>
                         <div class="d-flex flex-wrap justify-content-center pb-lg-0">
                             <button type="submit" id="kt_password_reset_submit" class="btn btn-primary me-4">
-                                <span class="indicator-label">Submit</span>
+                                <span class="indicator-label">{{__('forgotpassword.submit')}}</span>
                                 <span class="indicator-progress">Please wait...
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
-                            <a href="{{route('login')}}" class="btn btn-light">Cancel</a>
+                            <a href="{{route('login')}}" class="btn btn-light">{{__('forgotpassword.cancel')}}</a>
                         </div>
                     </form>
                 </div>
@@ -90,9 +90,9 @@
                         </div>
                     </div> --}}
                     <div class="d-flex fw-semibold text-primary fs-base gap-5">
-                        <a href="../../demo1/dist/pages/team.html" target="_blank">Terms</a>
-                        <a href="../../demo1/dist/pages/pricing/column.html" target="_blank">Plans</a>
-                        <a href="../../demo1/dist/pages/contact.html" target="_blank">Contact Us</a>
+                        <a href="https://newlifeprog.net/page/policy" target="_blank">{{__('login.term')}}</a>
+                        <a href="https://newlifeprog.net/Programs" target="_blank">{{__('login.program')}}</a>
+                        <a href="https://newlifeprog.net/Contactus" target="_blank">{{__('login.contact us')}}</a>
                     </div>
                 </div>
             </div>

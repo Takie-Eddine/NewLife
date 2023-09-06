@@ -70,7 +70,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Weight</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.weight')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -86,7 +86,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Height</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.height')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -102,7 +102,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Blood Type</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.blood type')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -118,7 +118,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Sugar</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.sugar')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -134,7 +134,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Tension</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.tension')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -150,7 +150,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Oxygen</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.oxygen')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -166,7 +166,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Sleep Hours</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('profile.sleep hours')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -184,20 +184,20 @@
         <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile') ? 'active' : ''}}" href="{{route('user.profile',$user->id)}}">Overview</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile') ? 'active' : ''}}" href="{{route('user.profile',$user->id)}}">{{__('profile.overview')}}</a>
             </li>
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.edit') ? 'active' : ''}}" href="{{route('user.profile.edit',$user->id)}}">Settings</a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.document') ? 'active' : ''}} " href="{{route('user.profile.document',$user->id)}}">Document</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.edit') ? 'active' : ''}}" href="{{route('user.profile.edit',$user->id)}}">{{__('profile.settings')}}</a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.coach') ? 'active' : ''}} " href="{{route('user.profile.coach',$user->id)}}">Coach</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.document') ? 'active' : ''}} " href="{{route('user.profile.document',$user->id)}}">{{__('profile.document')}}</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item mt-2">
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('user.profile.coach') ? 'active' : ''}} " href="{{route('user.profile.coach',$user->id)}}">{{__('profile.coaches')}}</a>
             </li>
             <!--end::Nav item-->
         </ul>

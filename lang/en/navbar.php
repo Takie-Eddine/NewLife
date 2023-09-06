@@ -3,13 +3,13 @@
 
 return[
 
-    'my profile' => '',
-    'languages' => '',
-    'acount settings' => '',
-    'sign out' => '',
-    'dark' => '',
-    'light' => '',
-    'system' => '',
+    'my profile' => 'My Profile',
+    'languages' => 'Language',
+    'acount settings' => 'Account Settings',
+    'sign out' => 'Sign Out',
+    'dark' => 'Dark',
+    'light' => 'Light',
+    'system' => 'System',
 
 
 

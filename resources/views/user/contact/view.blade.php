@@ -19,13 +19,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Contact</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('user.contact')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('profile.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,13 +35,13 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.contacts')}}" class="text-muted text-hover-primary">Contacts</a>
+                            <a href="{{route('user.contacts')}}" class="text-muted text-hover-primary">{{__('user.contacts')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">View Contact</li>
+                        <li class="breadcrumb-item text-muted">{{__('user.view contact')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -65,7 +65,7 @@
                                         <span class="path4"></span>
                                         <span class="path5"></span>
                                     </i>
-                                    <h2>Contact Details</h2>
+                                    <h2>{{__('user.contact details')}}</h2>
                                 </div>
                                 <!--end::Card title-->
                                 <!--begin::Card toolbar-->
@@ -76,7 +76,7 @@
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                         <span class="path3"></span>
-                                    </i>Chat</button>
+                                    </i>{{__('user.chat')}}</button>
                                     <!--end::Chat-->
                                     <!--begin::Chat-->
                                     <a href="../../demo1/dist/apps/inbox/reply.html" class="btn btn-sm btn-light btn-active-light-primary">
@@ -86,7 +86,7 @@
                                         <span class="path3"></span>
                                         <span class="path4"></span>
                                         <span class="path5"></span>
-                                    </i>Message</a>
+                                    </i>{{__('user.message')}}</a>
                                     <!--end::Chat-->
                                     <!--begin::Action menu-->
                                     {{-- <a href="#" class="btn btn-sm btn-icon btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
@@ -162,7 +162,7 @@
                                     <!--begin:::Tab item-->
                                     <li class="nav-item">
                                         <a class="nav-link text-active-primary d-flex align-items-center pb-4 active" data-bs-toggle="tab" href="#kt_contact_view_general">
-                                        <i class="ki-duotone ki-home fs-4 me-1"></i>General</a>
+                                        <i class="ki-duotone ki-home fs-4 me-1"></i>{{__('user.general')}}</a>
                                     </li>
                                     <!--end:::Tab item-->
                                     <!--begin:::Tab item-->
@@ -197,13 +197,13 @@
                                         <div class="d-flex flex-column gap-5 mt-7">
                                             <!--begin::Company name-->
                                             <div class="d-flex flex-column gap-1">
-                                                <div class="fw-bold text-muted">Role</div>
+                                                <div class="fw-bold text-muted">{{__('profile.role')}}</div>
                                                 <div class="fw-bold fs-5">{{$admin->role->name}}</div>
                                             </div>
                                             <!--end::Company name-->
                                             <!--begin::City-->
                                             <div class="d-flex flex-column gap-1">
-                                                <div class="fw-bold text-muted">Last Active</div>
+                                                <div class="fw-bold text-muted">{{__('user.last active')}}</div>
                                                 @if ($admin->last_active_at)
                                                     <div class="fw-bold fs-5">{{$admin->last_active_at->longAbsoluteDiffForHumans()}}</div>
                                                 @else

@@ -44,7 +44,7 @@
                             </span>
                         </span>
                         <a class="menu-link" href="{{route('admin.dashboard')}}">
-                            <span class="menu-title">Dashboards</span>
+                            <span class="menu-title">{{__('sidebar.dashboard')}}</span>
                         </a>
                     </span>
                 </div>
@@ -62,7 +62,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Users</span>
+                        <span class="menu-title">{{__('sidebar.users')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -75,7 +75,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Participant</span>
+                                <span class="menu-title">{{__('sidebar.participant')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <!--end:Menu link-->
@@ -88,7 +88,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Participants</span>
+                                        <span class="menu-title">{{__('sidebar.participants')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -100,7 +100,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Participant</span>
+                                        <span class="menu-title">{{__('sidebar.add participant')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -124,7 +124,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Coach</span>
+                                <span class="menu-title">{{__('sidebar.coach')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <!--end:Menu link-->
@@ -137,7 +137,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Coaches</span>
+                                        <span class="menu-title">{{__('sidebar.coaches')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -149,7 +149,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Coach</span>
+                                        <span class="menu-title">{{__('sidebar.add coach')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -179,7 +179,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Programs</span>
+                        <span class="menu-title">{{__('sidebar.programs')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -192,7 +192,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Program</span>
+                                <span class="menu-title">{{__('sidebar.program')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <!--end:Menu link-->
@@ -205,7 +205,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Programs</span>
+                                        <span class="menu-title">{{__('sidebar.programs')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -217,7 +217,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Program</span>
+                                        <span class="menu-title">{{__('sidebar.add program')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -237,7 +237,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Plan</span>
+                                <span class="menu-title">{{__('sidebar.plan')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <!--end:Menu link-->
@@ -250,7 +250,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Plans</span>
+                                        <span class="menu-title">{{__('sidebar.plans')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -262,7 +262,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Plans</span>
+                                        <span class="menu-title">{{__('sidebar.add plan')}}</span>
                                     </a>
                                     <!--end:Menu link-->
                                 </div>
@@ -339,7 +339,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Uploads</span>
+                        <span class="menu-title">{{__('sidebar.uploads')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -348,7 +348,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Medical Tests</span>
+                                <span class="menu-title">{{__('sidebar.medical tests')}}</span>
                             </a>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Facilities </span>
+                                <span class="menu-title">{{__('sidebar.facilities')}} </span>
                             </a>
                         </div>
                     </div>
@@ -375,7 +375,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Admin Management</span>
+                        <span class="menu-title">{{__('sidebar.admin managment')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -384,7 +384,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Admins</span>
+                                <span class="menu-title">{{__('sidebar.admins')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <div class="menu-sub menu-sub-accordion">
@@ -393,7 +393,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Admins</span>
+                                        <span class="menu-title">{{__('sidebar.admins')}}</span>
                                     </a>
                                 </div>
                                 <div class="menu-item">
@@ -401,7 +401,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Admin</span>
+                                        <span class="menu-title">{{__('sidebar.add admin')}}</span>
                                     </a>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Roles</span>
+                                <span class="menu-title">{{__('sidebar.roles')}}</span>
                                 <span class="menu-arrow"></span>
                             </span>
                             <div class="menu-sub menu-sub-accordion">
@@ -420,7 +420,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Roles </span>
+                                        <span class="menu-title">{{__('sidebar.roles')}} </span>
                                     </a>
                                 </div>
                                 <div class="menu-item">
@@ -428,7 +428,7 @@
                                         <span class="menu-bullet">
                                             <span class="bullet bullet-dot"></span>
                                         </span>
-                                        <span class="menu-title">Add Role</span>
+                                        <span class="menu-title">{{__('sidebar.add role')}}</span>
                                     </a>
                                 </div>
                             </div>
@@ -447,7 +447,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Tasks</span>
+                        <span class="menu-title">{{__('sidebar.tasks')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -456,7 +456,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Tasks</span>
+                                <span class="menu-title">{{__('sidebar.tasks')}}</span>
                             </a>
                         </div>
                         <div class="menu-item">
@@ -464,7 +464,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Add Task</span>
+                                <span class="menu-title">{{__('sidebar.add task')}}</span>
                             </a>
                         </div>
                     </div>
@@ -482,7 +482,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Food</span>
+                        <span class="menu-title">{{__('sidebar.food')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -491,7 +491,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Meals</span>
+                                <span class="menu-title">{{__('sidebar.meals')}}</span>
                             </a>
                         </div>
                         <div class="menu-item">
@@ -499,7 +499,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Add Meal</span>
+                                <span class="menu-title">{{__('sidebar.add meal')}}</span>
                             </a>
                         </div>
                     </div>
@@ -519,7 +519,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Inbox</span>
+                        <span class="menu-title">{{__('sidebar.inbox')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -583,7 +583,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Chat</span>
+                        <span class="menu-title">{{__('sidebar.chat')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <!--end:Menu link-->
@@ -644,7 +644,7 @@
                             </span>
                             <!--end::Svg Icon-->
                         </span>
-                        <span class="menu-title">Calendar</span>
+                        <span class="menu-title">{{__('sidebar.calender')}}</span>
                     </a>
                     <!--end:Menu link-->
                 </div>
@@ -660,7 +660,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <span class="menu-title">Contacts</span>
+                        <span class="menu-title">{{__('sidebar.contacts')}}</span>
                         <span class="menu-arrow"></span>
                     </span>
                     <div class="menu-sub menu-sub-accordion">
@@ -669,7 +669,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Contacts</span>
+                                <span class="menu-title">{{__('sidebar.contacts')}}</span>
                             </a>
                         </div>
                         {{-- <div class="menu-item">

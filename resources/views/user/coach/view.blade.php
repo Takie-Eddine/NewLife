@@ -1,4 +1,4 @@
-@extends('admin.layouts.admin')
+@extends('user.layouts.user')
 
 
 @section('title', 'Specialist')
@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Specialist</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('user.coach')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('profile.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">Specialists</a>
+                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">{{__('profile.coaches')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -44,7 +44,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">View Specialist</li>
+                        <li class="breadcrumb-item text-muted">{{__('user.view coach')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -68,7 +68,7 @@
                     <div class="card-header cursor-pointer">
                         <!--begin::Card title-->
                         <div class="card-title m-0">
-                            <h3 class="fw-bold m-0">Specialist Details</h3>
+                            <h3 class="fw-bold m-0">{{__('user.coach details')}}</h3>
                         </div>
                         <!--end::Card title-->
                         <!--begin::Action-->
@@ -81,7 +81,7 @@
                         <!--begin::Row-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Full Name</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('user.full name')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -93,7 +93,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Domain</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('user.domain')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -117,7 +117,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Contact Phone
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.contact phone')}}
                             <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
                                 <i class="ki-duotone ki-information fs-7">
                                     <span class="path1"></span>
@@ -135,7 +135,7 @@
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-7">
+                        {{-- <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">Birthday</label>
                             <!--end::Label-->
@@ -144,12 +144,12 @@
                                 <span class="fw-semibold text-gray-800 fs-6">{{$coach->profile->birthday}}</span>
                             </div>
                             <!--end::Col-->
-                        </div>
+                        </div> --}}
                         <!--end::Input group-->
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Gender</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('user.gender')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
@@ -159,7 +159,7 @@
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-7">
+                        {{-- <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">Country
                             <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
@@ -175,10 +175,10 @@
                                 <span class="fw-bold fs-6 text-gray-800">{{$coach->profile->country}}</span>
                             </div>
                             <!--end::Col-->
-                        </div>
+                        </div> --}}
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-7">
+                        {{-- <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">City</label>
                             <!--end::Label-->
@@ -187,10 +187,10 @@
                                 <span class="fw-semibold text-gray-800 fs-6">{{$coach->profile->city}}</span>
                             </div>
                             <!--end::Col-->
-                        </div>
+                        </div> --}}
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="row mb-7">
+                        {{-- <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">Addres</label>
                             <!--end::Label-->
@@ -199,12 +199,12 @@
                                 <span class="fw-semibold text-gray-800 fs-6">{{$coach->profile->street_address}}</span>
                             </div>
                             <!--end::Col-->
-                        </div>
+                        </div> --}}
                         <!--end::Input group-->
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Communication</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('profile.communication')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">

@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Participant</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('profile.account overview')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('profile.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('user.profile')}}" class="text-muted text-hover-primary">Account</a>
+                            <a href="{{route('user.profile')}}" class="text-muted text-hover-primary">{{__('profile.account')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -44,7 +44,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Document</li>
+                        <li class="breadcrumb-item text-muted">{{__('profile.document')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -64,8 +64,8 @@
                 <!--end::Navbar-->
                 <div class="d-flex flex-wrap flex-stack mb-6">
                     <!--begin::Title-->
-                    <h3 class="fw-bold my-2">My Documents
-                    <span class="fs-6 text-gray-400 fw-semibold ms-1">{{$files->count()}}</span></h3>
+                    <h3 class="fw-bold my-2">{{__('profile.my documents')}}
+                    <span class="fs-6 text-gray-400 fw-semibold ms-1">({{$files->count()}})</span></h3>
                     <!--end::Title-->
                     <!--begin::Controls-->
                     <div class="d-flex my-2">
@@ -81,7 +81,7 @@
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
-                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-sm border-body bg-body w-150px ps-10" placeholder="Search File" />
+                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-sm border-body bg-body w-150px ps-10" placeholder="{{__('profile.search file')}}" />
                                 </div>
                             </form>
                         </div>
