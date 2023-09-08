@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Specialist</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.coaches')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">Specialists</a>
+                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">{{__('admin.coaches')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -44,7 +44,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">View Specialist</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.view coach')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -60,7 +60,7 @@
             <div id="kt_app_content_container" class="app-container container-xxl">
                 @include('admin.coach.header')
                 <div class="d-flex flex-wrap flex-stack mb-6">
-                    <h3 class="text-gray-800 fw-bold my-2">Participants
+                    <h3 class="text-gray-800 fw-bold my-2">{{__('admin.participants')}}
                     <span class="fs-6 text-gray-400 fw-semibold ms-1">({{$participants->count()}})</span></h3>
                 </div>
                 <div class="row g-6 mb-6 g-xl-9 mb-xl-9">

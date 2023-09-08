@@ -22,13 +22,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Admin</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.admin')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -37,12 +37,12 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.users')}}" class="text-muted text-hover-primary">Admins</a>
+                            <a href="{{route('admin.users')}}" class="text-muted text-hover-primary">{{__('admin.admins')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">View Admin</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.view admin')}}</li>
                     </ul>
                 </div>
             </div>
@@ -114,45 +114,50 @@
                                     </div> --}}
                                 </div>
                                 <div class="d-flex flex-stack fs-4 py-3">
-                                    <div class="fw-bold rotate collapsible" data-bs-toggle="collapse" href="#kt_user_view_details" role="button" aria-expanded="false" aria-controls="kt_user_view_details">Details
+                                    <div class="fw-bold rotate collapsible" data-bs-toggle="collapse" href="#kt_user_view_details" role="button" aria-expanded="false" aria-controls="kt_user_view_details">{{__('admin.details')}}
                                     <span class="ms-2 rotate-180">
                                         <i class="ki-duotone ki-down fs-3"></i>
                                     </span></div>
                                     <span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit customer details">
-                                        <a href="{{route('admin.users.edit',$admin->id)}}" class="btn btn-sm btn-light-primary" >Edit</a>
+                                        <a href="{{route('admin.users.edit',$admin->id)}}" class="btn btn-sm btn-light-primary" >{{__('admin.edit')}}</a>
                                     </span>
                                 </div>
                                 <div class="separator"></div>
                                 <div id="kt_user_view_details" class="collapse show">
                                     <div class="pb-5 fs-6">
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Phone</div>
+                                        <div class="fw-bold mt-5">{{__('admin.phone number')}}</div>
                                         <div class="text-gray-600">{{$admin->profile->phone}}</div>
                                         <!--begin::Details item-->
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Email</div>
+                                        <div class="fw-bold mt-5">{{__('admin.email')}}</div>
                                         <div class="text-gray-600">
                                             <a href="#" class="text-gray-600 text-hover-primary">{{$admin->email}}</a>
                                         </div>
                                         <!--begin::Details item-->
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Address</div>
+                                        <div class="fw-bold mt-5">{{__('admin.address')}}</div>
                                         <div class="text-gray-600">{{$admin->profile->street_address}},
                                         <br />{{$admin->profile->city}}
                                         <br />{{$admin->profile->country}}</div>
                                         <!--begin::Details item-->
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Birthday</div>
+                                        <div class="fw-bold mt-5">{{__('admin.birthday')}}</div>
                                         <div class="text-gray-600">{{$admin->profile->birthday}}</div>
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Gender</div>
-                                        <div class="text-gray-600">{{$admin->profile->gender}}</div>
+                                        <div class="fw-bold mt-5">{{__('admin.gender')}}</div>
+                                        @if ($admin->profile->gender == 'male')
+                                            <div class="text-gray-600">{{__('admin.male')}}</div>
+                                        @else
+                                            <div class="text-gray-600">{{__('admin.female')}}</div>
+                                        @endif
+
                                         <!--begin::Details item-->
-                                        <div class="fw-bold mt-5">Last Login</div>
+                                        <div class="fw-bold mt-5">{{__('admin.last login')}}</div>
                                         @if ($admin->last_active_at)
                                             <div class="text-gray-600">{{$admin->last_active_at->longAbsoluteDiffForHumans()}}</div>
                                         @else
-                                            <div class="text-gray-600">Not Active</div>
+                                            <div class="text-gray-600">{{__('admin.not active')}}</div>
                                         @endif
 
                                         <!--begin::Details item-->
@@ -168,8 +173,8 @@
                                 <div class="card card-flush mb-6 mb-xl-9">
                                     <div class="card-header mt-6">
                                         <div class="card-title flex-column">
-                                            <h2 class="mb-1">Admin's Tasks</h2>
-                                            <div class="fs-6 fw-semibold text-muted">Total {{$admin->tasks->count()}} tasks </div>
+                                            <h2 class="mb-1">{{__('admin.admin tasks')}}</h2>
+                                            <div class="fs-6 fw-semibold text-muted">{{__('admin.total')}} {{$admin->tasks->count()}} {{__('admin.task')}} </div>
                                         </div>
                                         @if ($errors->any())
                                         <div class="alert alert-danger">

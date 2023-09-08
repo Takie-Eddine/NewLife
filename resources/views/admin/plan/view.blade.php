@@ -19,13 +19,13 @@
                     <!--begin::Page title-->
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Plan</h1>
+                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.plan')}}</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -34,7 +34,7 @@
                             </li>
                             <!--end::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.plans')}}" class="text-muted text-hover-primary">Plans</a>
+                                <a href="{{route('admin.plans')}}" class="text-muted text-hover-primary">{{__('admin.plans')}}</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -42,7 +42,7 @@
                                 <span class="bullet bg-gray-400 w-5px h-2px"></span>
                             </li>
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">View Plan</li>
+                            <li class="breadcrumb-item text-muted">{{__('admin.view plan')}}</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -66,7 +66,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2>Services</h2>
+                                        <h2>{{__('admin.services')}}</h2>
                                     </div>
                                     <!--end::Card title-->
                                 </div>
@@ -83,9 +83,9 @@
                                                 <table id="kt_customer_details_invoices_table_1" class="table align-middle table-row-dashed fs-6 fw-bold gs-0 gy-4 p-0 m-0">
                                                     <thead class="border-bottom border-gray-200 fs-7 text-uppercase fw-bold">
                                                         <tr class="text-start text-gray-400">
-                                                            <th class="min-w-100px">Service Name</th>
-                                                            <th class="min-w-100px">Description</th>
-                                                            <th class="min-w-100px">Included</th>
+                                                            <th class="min-w-100px">{{__('admin.service name')}}</th>
+                                                            <th class="min-w-100px">{{__('admin.description')}}</th>
+                                                            <th class="min-w-100px">{{__('admin.included')}}</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody class="fs-6 fw-semibold text-gray-600">
@@ -128,7 +128,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2>Plan</h2>
+                                        <h2>{{__('admin.plan')}}</h2>
                                     </div>
                                     <!--end::Card title-->
                                     <!--begin::Card toolbar-->
@@ -158,7 +158,7 @@
                                     <!--begin::Section-->
                                     <div class="mb-7">
                                         <!--begin::Title-->
-                                        <h5 class="mb-4">Plan name</h5>
+                                        <h5 class="mb-4">{{__('admin.plan name')}}</h5>
                                         <!--end::Title-->
                                         <!--begin::Details-->
                                         <div class="mb-0">
@@ -177,7 +177,7 @@
                                     <!--begin::Section-->
                                     <div class="mb-10">
                                         <!--begin::Title-->
-                                        <h5 class="mb-4">Plan description</h5>
+                                        <h5 class="mb-4">{{__('admin.plan description')}}</h5>
                                         <!--end::Title-->
                                         <!--begin::Details-->
                                         <div class="mb-0">
@@ -193,7 +193,7 @@
                                     <!--begin::Section-->
                                     <div class="mb-10">
                                         <!--begin::Title-->
-                                        <h5 class="mb-4">Program</h5>
+                                        <h5 class="mb-4">{{__('admin.program')}}</h5>
                                         <!--end::Title-->
                                         <!--begin::Details-->
                                         <div class="mb-0">
@@ -207,7 +207,7 @@
                                     <!--end::Section-->
                                     <!--begin::Actions-->
                                     <div class="mb-0">
-                                        <a href="{{route('admin.plans.edit',$plan->id)}}" class="btn btn-primary" id="kt_subscriptions_create_button">Edit Plan</a>
+                                        <a href="{{route('admin.plans.edit',$plan->id)}}" class="btn btn-primary" id="kt_subscriptions_create_button">{{__('admin.edit plan')}}</a>
                                     </div>
                                     <!--end::Actions-->
                                 </div>

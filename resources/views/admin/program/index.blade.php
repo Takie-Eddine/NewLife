@@ -19,13 +19,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Program List</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.program list')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,7 +34,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Programs</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.programs')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -64,7 +64,7 @@
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
-                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Programs" />
+                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="{{__('admin.search program')}}" />
                                 </div>
                             </form>
 
@@ -166,7 +166,7 @@
                                 </button> --}}
                                 <!--end::Export-->
                                 <!--begin::Add customer-->
-                                <a  class="btn btn-primary"  href="{{route('admin.programs.create')}}">Add Program</a>
+                                <a  class="btn btn-primary"  href="{{route('admin.programs.create')}}">{{__('admin.add program')}}</a>
                                 <!--end::Add customer-->
                             </div>
                             <!--end::Toolbar-->
@@ -192,12 +192,12 @@
                                             <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
                                         </div>
                                     </th> --}}
-                                    <th class="min-w-125px">Program Name</th>
-                                    <th class="min-w-125px">Feature</th>
-                                    <th class="min-w-125px">Plan</th>
-                                    <th class="min-w-125px">Status</th>
-                                    <th class="min-w-125px">Created Date</th>
-                                    <th class="text-end min-w-70px">Actions</th>
+                                    <th class="min-w-125px">{{__('admin.program name')}}</th>
+                                    <th class="min-w-125px">{{__('admin.feature')}}</th>
+                                    <th class="min-w-125px">{{__('admin.plan')}}</th>
+                                    <th class="min-w-125px">{{__('admin.status')}}</th>
+                                    <th class="min-w-125px">{{__('admin.created date')}}</th>
+                                    <th class="text-end min-w-70px">{{__('admin.actions')}}</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
@@ -233,7 +233,7 @@
                                         </td>
                                         <td>{{$program->created_at}}</td>
                                         <td class="text-end">
-                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">{{__('admin.actions')}}
                                             <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
                                             <!--begin::Menu-->
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
@@ -241,22 +241,22 @@
                                                 <div class="menu-item px-3">
                                                     <a href="{{route('admin.programs.activate',$program->id)}}" class="menu-link px-3">
                                                         @if ($program->is_active == 'active')
-                                                            unactivate
+                                                        {{__('admin.unactive')}}
                                                         @else
-                                                            activate
+                                                            {{__('admin.active')}}
                                                         @endif
                                                     </a>
                                                 </div>
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.programs.edit',$program->id)}}" class="menu-link px-3"> edit </a>
+                                                    <a href="{{route('admin.programs.edit',$program->id)}}" class="menu-link px-3"> {{__('admin.edit')}} </a>
                                                 </div>
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.plans')}}" class="menu-link px-3"> plans </a>
+                                                    <a href="{{route('admin.plans')}}" class="menu-link px-3"> {{__('admin.plans')}} </a>
                                                 </div>
                                                 <!--end::Menu item-->
                                                 <!--begin::Menu item-->
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.programs.delete',$program->id)}}" class="menu-link px-3"> delete </a>
+                                                    <a href="{{route('admin.programs.delete',$program->id)}}" class="menu-link px-3"> {{__('admin.delete')}} </a>
                                                 </div>
                                                 <!--end::Menu item-->
                                             </div>

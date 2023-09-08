@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Participant</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.participant')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,7 +34,7 @@
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.participants')}}" class="text-muted text-hover-primary">Participants</a>
+                            <a href="{{route('admin.participants')}}" class="text-muted text-hover-primary">{{__('admin.participants')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -43,7 +43,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Edit Participant</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.edit participant')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -64,7 +64,7 @@
                         <!--begin::Card header-->
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_signin_method">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Sign-in Method *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.sign in method')}} *</h3>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@
                                 <div class="d-flex flex-wrap align-items-center">
                                     <!--begin::Label-->
                                     <div id="kt_signin_email">
-                                        <div class="fs-6 fw-bold mb-1">Email Address, Username, Password</div>
+                                        <div class="fs-6 fw-bold mb-1">{{__('admin.email address')}}, {{__('admin.username')}}, {{__('admin.password')}}</div>
                                         <div class="fw-semibold text-gray-600"></div>
                                     </div>
                                     <!--end::Label-->
@@ -97,33 +97,33 @@
                                             <div class="row mb-6">
                                                 <div class="col-lg-6 mb-4 mb-lg-0">
                                                     <div class="fv-row mb-0">
-                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">Enter  Email Address</label>
-                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="Email Address" name="email" value="{{$participant->email}}" required/>
+                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">{{__('admin.enter email')}}</label>
+                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="{{__('admin.email address')}}" name="email" value="{{$participant->email}}" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> Username</label>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="Username" required id="confirmemailpassword" value="{{$participant->name}}" />
+                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.username')}}</label>
+                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="{{__('admin.username')}}" required id="confirmemailpassword" value="{{$participant->name}}" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> Password</label>
-                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Password" name="password" id="newpassword" />
+                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.password')}}</label>
+                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.password')}}" name="password" id="newpassword" />
                                                     </div>
                                                 </div>
-                                                <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
+                                                <div class="form-text mb-5">{{__('admin.password must be at least 8 character and contain symbols')}}</div>
                                             </div>
                                             <div class="d-flex">
-                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
+                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">{{__('admin.cancel')}}</button>
                                             </div>
                                         <!--end::Form-->
                                     </div>
                                     <!--end::Edit-->
                                     <!--begin::Action-->
                                     <div id="kt_signin_email_button" class="ms-auto">
-                                        <button class="btn btn-light btn-active-light-primary" type="button">Create </button>
+                                        <button class="btn btn-light btn-active-light-primary" type="button">{{__('admin.create')}} </button>
                                     </div>
                                     <!--end::Action-->
                                 </div>
@@ -192,7 +192,7 @@
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <!--begin::Card title-->
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Participant Details *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.participant details')}} *</h3>
                             </div>
 
                             <!--end::Card title-->
@@ -216,7 +216,7 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">{{__('admin.avatar')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8">
@@ -256,7 +256,7 @@
                                             </div>
                                             <!--end::Image input-->
                                             <!--begin::Hint-->
-                                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                            <div class="form-text">{{__('admin.allowed')}}.</div>
                                             <!--end::Hint-->
                                         </div>
                                         <!--end::Col-->
@@ -265,7 +265,7 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.full name')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8">
@@ -273,12 +273,12 @@
                                             <div class="row">
                                                 <!--begin::Col-->
                                                 <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="{{$participant->profile->first_name}}" />
+                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="{{__('admin.first name')}}" value="{{$participant->profile->first_name}}" />
                                                 </div>
                                                 <!--end::Col-->
                                                 <!--begin::Col-->
                                                 <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="{{$participant->profile->last_name}}" />
+                                                    <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.last name')}}" value="{{$participant->profile->last_name}}" />
                                                 </div>
                                                 <!--end::Col-->
                                             </div>
@@ -292,7 +292,7 @@
                                     <div class="row mb-6">
                                         <!--begin::Label-->
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Contact Phone</span>
+                                            <span class="required">{{__('admin.contact phone')}}</span>
                                             <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
                                                 <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
                                                     <span class="path1"></span>
@@ -304,7 +304,7 @@
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="{{$participant->profile->phone}}" />
+                                            <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.phone number')}}" value="{{$participant->profile->phone}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -312,11 +312,11 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Birthday</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.birthday')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input class="form-control form-control-solid" name="birthday" value="{{$participant->profile->birthday}}"  placeholder="Pick date " id="kt_datepicker_3"/>
+                                            <input class="form-control form-control-solid" name="birthday" value="{{$participant->profile->birthday}}"  placeholder="{{__('admin.pick date')}} " id="kt_datepicker_3"/>
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -324,17 +324,17 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Gender</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.gender')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
                                             <div class="form-check-custom ">
                                                 <input type="radio"  name="gender" value="male" class="form-check-input"  @checked($participant->profile->gender == 'male') />
-                                                <label class="form-check-label" for="">Male</label>
+                                                <label class="form-check-label" for="">{{__('admin.male')}}</label>
                                             </div>
                                             <div class="form-check-custom">
                                                 <input type="radio"  name="gender" value="female" class="form-check-input"   @checked($participant->profile->gender == 'female')/>
-                                                <label class="form-check-label" for="">Female</label>
+                                                <label class="form-check-label" for="">{{__('admin.female')}}</label>
                                             </div>
                                         </div>
                                         <!--end::Col-->
@@ -346,20 +346,13 @@
                                     <div class="row mb-6">
                                         <!--begin::Label-->
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Country</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                                <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                    <span class="path1"></span>
-                                                    <span class="path2"></span>
-                                                    <span class="path3"></span>
-                                                </i>
-                                            </span>
+                                            <span class="required">{{__('admin.country')}}</span>
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a country..." class="form-select form-select-solid form-select-lg fw-semibold">
-                                                <option value="">Select a Country...</option>
+                                            <select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="{{__('admin.select country')}}" class="form-select form-select-solid form-select-lg fw-semibold">
+                                                <option value="">{{__('admin.select country')}}</option>
                                                 @foreach ($countries as $country => $value)
                                                     <option value="{{$country}}"  @selected( $participant->profile->country ==$country )>{{$value}}</option>
                                                 @endforeach
@@ -371,33 +364,33 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">City </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.city')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="city" class="form-control form-control-lg form-control-solid" placeholder="City" value="{{$participant->profile->city}}" />
+                                            <input type="text" name="city" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.city')}}" value="{{$participant->profile->city}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
 
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Postal Code </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.postal code')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="postal_code" class="form-control form-control-lg form-control-solid" placeholder="Postal Code" value="{{$participant->profile->postal_code}}" />
+                                            <input type="text" name="postal_code" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.postal code')}}" value="{{$participant->profile->postal_code}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
 
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Address </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.address')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="address" class="form-control form-control-lg form-control-solid" placeholder="Address" value="{{$participant->profile->street_address}}" />
+                                            <input type="text" name="address" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.address')}}" value="{{$participant->profile->street_address}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -447,7 +440,7 @@
                     <div class="card mb-5 mb-xl-10">
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Participant Medical Info *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.participant medical info')}} *</h3>
                             </div>
                         </div>
                         @if ($errors->any())
@@ -463,28 +456,28 @@
                         <div id="kt_account_settings_profile_details" class="collapse show">
                             <div class="card-body border-top p-9">
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Weight </label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.weight')}} </label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="weight" class="form-control form-control-lg form-control-solid" placeholder="Weight" value="{{$medical_info->weight ?? old('weight')}}" />
+                                        <input type="text" name="weight" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.weight')}}" value="{{$medical_info->weight ?? old('weight')}}" />
                                     </div>
                                 </div>
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Height </label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.height')}} </label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="height" class="form-control form-control-lg form-control-solid" placeholder="Height" value="{{$medical_info->height ?? old('height')}}" />
+                                        <input type="text" name="height" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.height')}}" value="{{$medical_info->height ?? old('height')}}" />
                                     </div>
                                 </div>
                                 <div class="row mb-6">
                                     <!--begin::Label-->
                                     <label class="col-lg-4 col-form-label  fw-semibold fs-6">
-                                        <span class="required">Blood Type</span>
+                                        <span class="required">{{__('admin.blood type')}}</span>
 
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Col-->
                                     <div class="col-lg-8 fv-row">
-                                        <select name="blood_type" aria-label="Select a Blood Type" data-control="select2" data-placeholder="Select a Blood Type..." class="form-select form-select-solid form-select-lg fw-semibold">
-                                            <option value="">Select a Blood Type...</option>
+                                        <select name="blood_type" aria-label="Select a Blood Type" data-control="select2" data-placeholder="{{__('admin.select a blood type')}}" class="form-select form-select-solid form-select-lg fw-semibold">
+                                            <option value="">{{__('admin.select a blood type')}}</option>
                                             @if ( $medical_info)
                                                 <option value='A+'  @selected( $medical_info->blood_type == 'A+')>A+</option>
                                                 <option value='A-'  @selected( $medical_info->blood_type == 'A-')>A-</option>
@@ -510,27 +503,27 @@
                                     <!--end::Col-->
                                 </div>
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sugar </label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.sugar')}} </label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="sugar" class="form-control form-control-lg form-control-solid" placeholder="Sugar" value="{{$medical_info->sugar ?? old('sugar')}}" />
+                                        <input type="text" name="sugar" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.sugar')}}" value="{{$medical_info->sugar ?? old('sugar')}}" />
                                     </div>
                                 </div>
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Tension </label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.tension')}} </label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="tension" class="form-control form-control-lg form-control-solid" placeholder="Tension" value="{{$medical_info->tension ?? old('tension')}}" />
+                                        <input type="text" name="tension" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.tension')}}" value="{{$medical_info->tension ?? old('tension')}}" />
                                     </div>
                                 </div>
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Oxygen</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.oxygen')}}</label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="oxygen" class="form-control form-control-lg form-control-solid" placeholder="Oxygen" value="{{$medical_info->oxygene ?? old('oxygen')}}" />
+                                        <input type="text" name="oxygen" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.oxygen')}}" value="{{$medical_info->oxygene ?? old('oxygen')}}" />
                                     </div>
                                 </div>
                                 <div class="row mb-6">
-                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Sleep Hour</label>
+                                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.sleep hours')}}</label>
                                     <div class="col-lg-8 fv-row">
-                                        <input type="text" name="sleep_hour" class="form-control form-control-lg form-control-solid" placeholder="Sleep Hour" value="{{$medical_info->sleep_hours ?? old('sleep_hour')}}" />
+                                        <input type="text" name="sleep_hour" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.sleep hours')}}" value="{{$medical_info->sleep_hours ?? old('sleep_hour')}}" />
                                     </div>
                                 </div>
                             </div>
@@ -539,7 +532,7 @@
                     <div class="card mb-5 mb-xl-10">
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Participant Plan *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.participant plan')}} *</h3>
                             </div>
                         </div>
                         @if ($errors->any())
@@ -556,18 +549,11 @@
                             <div class="card-body border-top p-9">
                                 <div class="row mb-6">
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                        <span class="required">Program </span>
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>
-                                        </span>
+                                        <span class="required">{{__('admin.program')}} </span>
                                     </label>
                                     <div class="col-lg-8 fv-row">
-                                        <select name="program" aria-label="Select a Program" data-control="select2" data-placeholder="Select a Program..." onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
-                                            <option value=""> Select a Program...</option>
+                                        <select name="program" aria-label="Select a Program" data-control="select2" data-placeholder="{{__('admin.select a program')}}" onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
+                                            <option value=""> {{__('admin.select a program')}}</option>
                                             @forelse ($programs as $program)
                                             <option value="{{$program->id}}"  @selected( $participant->program_id == $program->id ) > {{$program->name}} </option>
                                             @empty
@@ -577,18 +563,11 @@
                                 </div>
                                 <div class="row mb-6">
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                        <span class="required">Plan </span>
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>
-                                        </span>
+                                        <span class="required">{{__('admin.plan')}} </span>
                                     </label>
                                     <div class="col-lg-8 fv-row">
-                                        <select name="plan" aria-label="Select a Plan" data-control="select2" data-placeholder="Select a Plan..." class="form-select form-select-solid form-select-lg fw-semibold">
-                                            <option value=""> Select a Plan...</option>
+                                        <select name="plan" aria-label="Select a Plan" data-control="select2" data-placeholder="{{__('admin.select a plan')}}" class="form-select form-select-solid form-select-lg fw-semibold">
+                                            <option value=""> {{__('admin.select a plan')}}</option>
                                             @forelse ($plans as $plan)
                                             <option value="{{$plan->id}}"  @selected( $participant->plan_id == $plan->id ) > {{$plan->name}} </option>
                                             @empty
@@ -601,8 +580,8 @@
                     </div>
 
                     <div class="card-footer d-flex justify-content-end py-6 px-9">
-                        <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
-                        <button type="submit" class="btn btn-primary" >Update Participant</button>
+                        <button type="reset" class="btn btn-light btn-active-light-primary me-2">{{__('admin.discard')}}</button>
+                        <button type="submit" class="btn btn-primary" >{{__('admin.update participant')}}</button>
                     </div>
                 </form>
             </div>

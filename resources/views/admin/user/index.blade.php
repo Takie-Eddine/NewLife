@@ -19,15 +19,15 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Admin</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.admin')}}</h1>
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">Admins</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.admins')}}</li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
-                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Tasks" />
+                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="{{__('admin.search admin')}}" />
                                 </div>
                             </form>
 
@@ -151,7 +151,7 @@
                                 </button> --}}
                                 <!--end::Export-->
                                 <!--begin::Add customer-->
-                                <a  class="btn btn-primary"  href="{{route('admin.users.create')}}">Add Admin</a>
+                                <a  class="btn btn-primary"  href="{{route('admin.users.create')}}">{{__('admin.add admin')}}</a>
                                 <!--end::Add customer-->
                             </div>
                             <!--end::Toolbar-->
@@ -177,11 +177,11 @@
                                             <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
                                         </div>
                                     </th> --}}
-                                    <th class="min-w-125px">Admin </th>
-                                    <th class="min-w-125px">Role</th>
-                                    <th class="min-w-125px">Last Login</th>
-                                    <th class="min-w-125px">Created Date</th>
-                                    <th class="text-end min-w-70px">Actions</th>
+                                    <th class="min-w-125px">{{__('admin.admin')}} </th>
+                                    <th class="min-w-125px">{{__('admin.role')}}</th>
+                                    <th class="min-w-125px">{{__('admin.last login')}}</th>
+                                    <th class="min-w-125px">{{__('admin.created date')}}</th>
+                                    <th class="text-end min-w-70px">{{__('admin.actions')}}</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
@@ -223,14 +223,14 @@
 
                                         <td>{{$admin->created_at}}</td>
                                         <td class="text-end">
-                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">{{__('admin.actions')}}
                                             <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.users.edit',$admin->id)}}" class="menu-link px-3"> edit </a>
+                                                    <a href="{{route('admin.users.edit',$admin->id)}}" class="menu-link px-3"> {{__('admin.edit')}} </a>
                                                 </div>
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.users.delete',$admin->id)}}" class="menu-link px-3"> delete </a>
+                                                    <a href="{{route('admin.users.delete',$admin->id)}}" class="menu-link px-3"> {{__('admin.delete')}} </a>
                                                 </div>
                                             </div>
                                         </td>

@@ -20,13 +20,13 @@
                     <!--begin::Page title-->
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Program</h1>
+                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('admin.program')}}</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -35,13 +35,13 @@
                             </li>
                             <!--end::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.programs')}}" class="text-muted text-hover-primary">Programs</a>
+                                <a href="{{route('admin.programs')}}" class="text-muted text-hover-primary">{{__('admin.programs')}}</a>
                             </li>
                             <li class="breadcrumb-item">
                                 <span class="bullet bg-gray-400 w-5px h-2px"></span>
                             </li>
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">Edit Program</li>
+                            <li class="breadcrumb-item text-muted">{{__('admin.edit program')}}</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -68,7 +68,7 @@
                                     <div class="card-header">
                                         <!--begin::Card title-->
                                         <div class="card-title">
-                                            <h2 class="fw-bold">Program</h2>
+                                            <h2 class="fw-bold">{{__('admin.program')}}</h2>
                                         </div>
 
                                         <!--begin::Card title-->
@@ -138,16 +138,16 @@
                                             <!--begin::Label-->
                                             <div class="d-flex flex-column mb-10 fv-row">
                                                 <!--begin::Label-->
-                                                <div class="fs-5 fw-bold required form-label mb-3">Name</div>
+                                                <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.name')}}</div>
                                                 <!--end::Label-->
-                                                <input class="form-control form-control-solid rounded-3" name="name" value="{{$program->name}}"/>
+                                                <input class="form-control form-control-solid rounded-3" name="name" value="{{$program->name}}" placeholder="{{__('admin.name')}}"/>
                                             </div>
                                             <!--end::Label-->
                                             <div class="d-flex flex-column mb-10 fv-row">
                                                 <!--begin::Label-->
-                                                <div class="fs-5 fw-bold required form-label mb-3">Description</div>
+                                                <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.description')}}</div>
                                                 <!--end::Label-->
-                                                <textarea class="form-control form-control-solid rounded-3" rows="4" name="description">{{$program->description}}</textarea>
+                                                <textarea class="form-control form-control-solid rounded-3" rows="4" name="description" placeholder="{{__('admin.description')}}">{{$program->description}}</textarea>
                                             </div>
 
 
@@ -159,17 +159,17 @@
                                                             <div data-repeater-item>
                                                                 <div class="form-group row mb-5">
                                                                     <div class="col-md-3">
-                                                                        <label class="form-label required">Feature Name:</label>
-                                                                        <input type="text" class="form-control mb-2 mb-md-0" placeholder="Enter feature name" name="feature" value="{{$feature->name}}" />
+                                                                        <label class="form-label required">{{__('admin.feature name')}} :</label>
+                                                                        <input type="text" class="form-control mb-2 mb-md-0" placeholder="{{__('admin.enter feature name')}}" name="feature" value="{{$feature->name}}" />
                                                                     </div>
                                                                     <div class="col-md-3">
                                                                         <div class="inner-repeater">
                                                                             <div data-repeater-list="services" class="mb-5">
                                                                                 @forelse ($feature->services as $service)
                                                                                     <div data-repeater-item>
-                                                                                        <label class="form-label required">Service Name:</label>
+                                                                                        <label class="form-label required">{{__('admin.service name')}} :</label>
                                                                                         <div class="input-group pb-3">
-                                                                                            <input type="text" class="form-control" placeholder="Enter service name" name="service" value="{{$service->description}}" />
+                                                                                            <input type="text" class="form-control" placeholder="{{__('admin.enter service name')}}" name="service" value="{{$service->description}}" />
                                                                                             <button class="border border-secondary btn btn-icon btn-flex btn-light-danger" data-repeater-delete type="button">
                                                                                                 <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
                                                                                             </button>
@@ -180,14 +180,14 @@
                                                                             </div>
                                                                             <button class="btn btn-sm btn-flex btn-light-primary" data-repeater-create type="button">
                                                                                 <i class="ki-duotone ki-plus fs-5"></i>
-                                                                                Add Service
+                                                                                {{__('admin.add service')}}
                                                                             </button>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-flex btn-light-danger mt-3 mt-md-9">
                                                                             <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
-                                                                            Delete Row
+                                                                            {{__('admin.delete row')}}
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -202,7 +202,7 @@
                                                 <div class="form-group">
                                                     <a href="javascript:;" data-repeater-create class="btn btn-flex btn-light-primary">
                                                         <i class="ki-duotone ki-plus fs-3"></i>
-                                                        Add Feature
+                                                        {{__('admin.add feature')}}
                                                     </a>
                                                 </div>
                                                 <!--end::Form group-->
@@ -216,7 +216,7 @@
                                 <div class="mb-0">
                                     <button type="submit" class="btn btn-primary" id="kt_subscriptions_create_button">
                                         <!--begin::Indicator label-->
-                                        <span class="indicator-label">Edit Program</span>
+                                        <span class="indicator-label">{{__('admin.edit program')}}</span>
                                         <!--end::Indicator label-->
                                         <!--begin::Indicator progress-->
                                         <span class="indicator-progress">Please wait...

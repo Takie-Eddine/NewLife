@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Facility </h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('admin.facility')}} </h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,13 +35,13 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.facilities')}}" class="text-muted text-hover-primary">Facilities</a>
+                            <a href="{{route('admin.facilities')}}" class="text-muted text-hover-primary">{{__('admin.facilities')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Edit Facility</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.edit facility')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -68,7 +68,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2 class="fw-bold">Edit Facility</h2>
+                                        <h2 class="fw-bold">{{__('admin.edit facility')}}</h2>
                                     </div>
 
                                     <!--begin::Card title-->
@@ -86,22 +86,22 @@
                                 <div class="card-body pt-0">
                                     <div class="d-flex flex-column mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <div class="fs-5 fw-bold required form-label mb-3">Name</div>
+                                        <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.name')}}</div>
                                         <!--end::Label-->
-                                        <input class="form-control form-control-solid rounded-3" name="name" value="{{$facility->name}}"/>
+                                        <input class="form-control form-control-solid rounded-3" name="name" value="{{$facility->name}}" placeholder="{{__('admin.name')}}"/>
                                     </div>
                                     <!--end::Label-->
                                     <div class="d-flex flex-column mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <div class="fs-5 fw-bold required form-label mb-3">Description</div>
+                                        <div class="fs-5 fw-bold required form-label mb-3"> {{__('admin.description')}}</div>
                                         <!--end::Label-->
-                                        <textarea class="form-control form-control-solid rounded-3" rows="4" name="description">{{$facility->description}}</textarea>
+                                        <textarea class="form-control form-control-solid rounded-3" rows="4" name="description" placeholder="{{__('admin.enter description')}}">{{$facility->description}}</textarea>
                                     </div>
                                     <div class="d-flex flex-column mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <div class="fs-5 fw-bold required form-label mb-3">Type</div>
+                                        <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.type')}}</div>
                                         <!--end::Label-->
-                                        <input class="form-control form-control-solid rounded-3" name="type" value="{{$facility->type}}"/>
+                                        <input class="form-control form-control-solid rounded-3" placeholder="{{__('admin.type')}}" name="type" value="{{$facility->type}}"/>
                                     </div>
                                     <div class="row g-10">
                                         @forelse ($facility->images as $image)
@@ -123,7 +123,7 @@
                                                         <div class="fs-6 fw-bold mt-5 d-flex flex-stack">
                                                             <span class="">
                                                             <span class="fs-6 fw-semibold text-gray-400"></span></span>
-                                                            <a href="{{route('admin.facilities.deleteimage',$image->id)}}" class="btn btn-sm btn-primary">Delete</a>
+                                                            <a href="{{route('admin.facilities.deleteimage',$image->id)}}" class="btn btn-sm btn-primary">{{__('admin.delete')}}</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -142,8 +142,8 @@
 
                                                 <!--begin::Info-->
                                                 <div class="ms-4">
-                                                    <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                                                    <span class="fs-7 fw-semibold text-gray-400">Upload up to 10 files</span>
+                                                    <h3 class="fs-5 fw-bold text-gray-900 mb-1">{{__('admin.drop files here or click to upload.')}}</h3>
+                                                    <span class="fs-7 fw-semibold text-gray-400">{{__('admin.upload up to 10 files')}}</span>
                                                 </div>
                                                 <!--end::Info-->
                                             </div>
@@ -155,7 +155,7 @@
                             <div class="mb-0">
                                 <button type="submit" class="btn btn-primary" id="kt_subscriptions_create_button">
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Upload </span>
+                                    <span class="indicator-label">{{__('admin.upload')}} </span>
                                     <!--end::Indicator label-->
                                     <!--begin::Indicator progress-->
                                     <span class="indicator-progress">Please wait...

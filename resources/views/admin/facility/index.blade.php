@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Facility List</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.facility list')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Facilities</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.facilities')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -65,7 +65,7 @@
                                         <span class="path1"></span>
                                         <span class="path2"></span>
                                     </i>
-                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Facilities" />
+                                    <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="{{__('admin.search facility')}}" />
                                 </div>
                             </form>
 
@@ -80,13 +80,13 @@
                                     <i class="ki-duotone ki-filter fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
-                                    </i>Filter
+                                    </i>{{__('admin.filter')}}
                                 </button>
                                 <!--begin::Menu 1-->
                                 <div class="menu menu-sub menu-sub-dropdown w-300px w-md-325px" data-kt-menu="true" id="kt-toolbar-filter">
                                     <!--begin::Header-->
                                     <div class="px-7 py-5">
-                                        <div class="fs-4 text-dark fw-bold">Filter Options</div>
+                                        <div class="fs-4 text-dark fw-bold">{{__('admin.filter option')}}</div>
                                     </div>
                                     <!--end::Header-->
                                     <!--begin::Separator-->
@@ -98,7 +98,7 @@
                                             <!--begin::Input group-->
                                             <div class="mb-10">
                                                 <!--begin::Label-->
-                                                <label class="form-label fs-5 fw-semibold mb-3">Type:</label>
+                                                <label class="form-label fs-5 fw-semibold mb-3">{{__('admin.type')}} :</label>
                                                 <!--end::Label-->
                                                 <!--begin::Input-->
                                                 <select name="type" class="form-select form-select-solid fw-bold" data-kt-select2="true" data-placeholder="Select Type" data-allow-clear="true" data-kt-customer-table-filter="month" data-dropdown-parent="#kt-toolbar-filter">
@@ -114,15 +114,15 @@
                                             <!--end::Input group-->
                                             <!--begin::Actions-->
                                             <div class="d-flex justify-content-end">
-                                                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true" data-kt-customer-table-filter="reset">Reset</button>
-                                                <button type="submit" class="btn btn-primary" data-kt-menu-dismiss="true" data-kt-customer-table-filter="filter">Apply</button>
+                                                <button type="reset" class="btn btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true" data-kt-customer-table-filter="reset">{{__('admin.reset')}}</button>
+                                                <button type="submit" class="btn btn-primary" data-kt-menu-dismiss="true" data-kt-customer-table-filter="filter">{{__('admin.apply')}}</button>
                                             </div>
                                             <!--end::Actions-->
                                         </div>
                                     </form>
                                     <!--end::Content-->
                                 </div>
-                                <a  class="btn btn-primary"  href="{{route('admin.facilities.create')}}">Upload Facilities</a>
+                                <a  class="btn btn-primary"  href="{{route('admin.facilities.create')}}">{{__('admin.upload facility')}}</a>
                             </div>
                         </div>
                     </div>
@@ -130,11 +130,11 @@
                         <table class="table align-middle table-row-dashed fs-6 gy-5" id="">
                             <thead>
                                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                    <th class="min-w-125px"> Name</th>
-                                    <th class="min-w-125px"> Description</th>
-                                    <th class="min-w-125px"> Type</th>
-                                    <th class="min-w-125px">Created Date</th>
-                                    <th class="text-end min-w-70px">Actions</th>
+                                    <th class="min-w-125px"> {{__('admin.name')}}</th>
+                                    <th class="min-w-125px"> {{__('admin.description')}}</th>
+                                    <th class="min-w-125px"> {{__('admin.type')}}</th>
+                                    <th class="min-w-125px">{{__('admin.created date')}}</th>
+                                    <th class="text-end min-w-70px">{{__('admin.actions')}}</th>
                                 </tr>
                             </thead>
                             <tbody class="fw-semibold text-gray-600">
@@ -154,15 +154,15 @@
                                         <td>{{$facility->type}}</td>
                                         <td>{{$facility->created_at}}</td>
                                         <td class="text-end">
-                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+                                            <a href="#" class="btn btn-sm btn-light btn-flex btn-center btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">{{__('admin.actions')}}
                                             <i class="ki-duotone ki-down fs-5 ms-1"></i></a>
                                             <!--begin::Menu-->
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.facilities.edit',$facility->id)}}" class="menu-link px-3"> edit </a>
+                                                    <a href="{{route('admin.facilities.edit',$facility->id)}}" class="menu-link px-3"> {{__('admin.edit')}} </a>
                                                 </div>
                                                 <div class="menu-item px-3">
-                                                    <a href="{{route('admin.facilities.delete',$facility->id)}}" class="menu-link px-3"> delete </a>
+                                                    <a href="{{route('admin.facilities.delete',$facility->id)}}" class="menu-link px-3"> {{__('admin.delete')}} </a>
                                                 </div>
                                             </div>
                                         </td>

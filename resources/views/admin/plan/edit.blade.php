@@ -19,13 +19,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Plan</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('admin.plan')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,13 +34,13 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.plans')}}" class="text-muted text-hover-primary">Programs</a>
+                            <a href="{{route('admin.plans')}}" class="text-muted text-hover-primary">{{__('admin.plans')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Edit Plan</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.edit plan')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -67,7 +67,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2 class="fw-bold">Plan</h2>
+                                        <h2 class="fw-bold">{{__('admin.plan')}}</h2>
                                     </div>
 
                                     <!--begin::Card title-->
@@ -137,21 +137,21 @@
                                         <!--begin::Label-->
                                         <div class="d-flex flex-column mb-10 fv-row">
                                             <!--begin::Label-->
-                                            <div class="fs-5 fw-bold required form-label mb-3">Name</div>
+                                            <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.name')}}</div>
                                             <!--end::Label-->
-                                            <input class="form-control form-control-solid rounded-3" placeholder="Enter plan name" name="name" value="{{$plan->name}}"/>
+                                            <input class="form-control form-control-solid rounded-3" placeholder="{{__('admin.enter plan name')}}" name="name" value="{{$plan->name}}"/>
                                         </div>
                                         <!--end::Label-->
                                         <div class="d-flex flex-column mb-10 fv-row">
                                             <!--begin::Label-->
-                                            <div class="fs-5 fw-bold required form-label mb-3">Description</div>
+                                            <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.description')}}</div>
                                             <!--end::Label-->
-                                            <textarea class="form-control form-control-solid rounded-3" placeholder="Enter plan description" rows="4" name="description">{{$plan->description}}</textarea>
+                                            <textarea class="form-control form-control-solid rounded-3" placeholder="{{__('admin.enter plan description')}}" rows="4" name="description">{{$plan->description}}</textarea>
                                         </div>
                                         <div class="d-flex flex-column mb-10 fv-row">
-                                            <label class="form-label required">Program</label>
-                                            <select name="program" aria-label="Select a Program"  data-control="select2" data-placeholder="Select a Program..."  class="form-select form-select-solid fw-bold">
-                                                <option value="">Select a Program...</option>
+                                            <label class="form-label required">{{__('admin.program')}}</label>
+                                            <select name="program" aria-label="Select a Program"  data-control="select2" data-placeholder="{{__('admin.select a program')}}"  class="form-select form-select-solid fw-bold">
+                                                <option value="">{{__('admin.select a program')}}</option>
                                                 @forelse ($programs as $program)
                                                 <option value="{{$program->id}}"{{$plan->program_id == $program->id ? 'selected' : null}}>{{$program->name}}</option>
                                                 @empty
@@ -225,8 +225,8 @@
                                                         <div data-repeater-item="" class="form-group d-flex flex-wrap align-items-center gap-5">
                                                             <!--begin::Select2-->
                                                             <div class="col-md-3">
-                                                                <label class="form-label required">Service</label>
-                                                                <select class="form-select" name="service" data-placeholder="Select a service" data-kt-ecommerce-catalog-add-category="condition_type">
+                                                                <label class="form-label required">{{__('admin.service')}}</label>
+                                                                <select class="form-select" name="service" data-placeholder="{{__('admin.select a service')}}" data-kt-ecommerce-catalog-add-category="condition_type">
                                                                     @forelse ($services as $service)
                                                                         <option value="{{$service->id}}"{{$plan_service->service_id == $service->id ? 'selected' : null}}>{{$service->description}}</option>
                                                                     @empty
@@ -236,15 +236,15 @@
                                                             <!--end::Select2-->
                                                             <!--begin::Input-->
                                                             <div class="col-md-3">
-                                                                <label class="form-label">Description</label>
-                                                                <input type="text" name="description" class="form-control"  placeholder="Enter description" value="{{$plan_service->description}}" />
+                                                                <label class="form-label">{{__('admin.description')}}</label>
+                                                                <input type="text" name="description" class="form-control"  placeholder="{{__('admin.enter description')}}" value="{{$plan_service->description}}" />
                                                             </div>
                                                             <!--end::Input-->
                                                             <div class="col-md-2">
                                                                 <div class="form-check form-check-custom form-check-solid mt-2 mt-md-11">
                                                                     <input class="form-check-input"  name="included" type="checkbox" value="yes" id="form_checkbox" @checked($plan_service->is_checked == 'checked') />
                                                                     <label class="form-check-label" for="form_checkbox">
-                                                                        Included
+                                                                        {{__('admin.included')}}
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -252,7 +252,7 @@
                                                             <div class="col-md-3">
                                                                 <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-flex btn-light-danger mt-3 mt-md-9">
                                                                     <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
-                                                                    Delete Row
+                                                                    {{__('admin.delete row')}}
                                                                 </a>
                                                             </div>
                                                             <!--end::Button-->
@@ -261,8 +261,8 @@
                                                         <div data-repeater-item="" class="form-group d-flex flex-wrap align-items-center gap-5">
                                                             <!--begin::Select2-->
                                                             <div class="col-md-3">
-                                                                <label class="form-label">Service</label>
-                                                                <select class="form-select" name="service" data-placeholder="Select a service" data-kt-ecommerce-catalog-add-category="condition_type">
+                                                                <label class="form-label">{{__('admin.service')}}</label>
+                                                                <select class="form-select" name="service" data-placeholder="{{__('admin.select a service')}}" data-kt-ecommerce-catalog-add-category="condition_type">
                                                                     @forelse ($services as $service)
                                                                         <option value="{{$service->id}}"{{old('service') == $service->id ? 'selected' : null}}>{{$service->description}}</option>
                                                                     @empty
@@ -272,15 +272,15 @@
                                                             <!--end::Select2-->
                                                             <!--begin::Input-->
                                                             <div class="col-md-3">
-                                                                <label class="form-label">Description</label>
-                                                                <input type="text" name="description" class="form-control"  placeholder="Enter description" value="{{old('description')}}" />
+                                                                <label class="form-label">{{__('admin.description')}}</label>
+                                                                <input type="text" name="description" class="form-control"  placeholder="{{__('admin.enter description')}}" value="{{old('description')}}" />
                                                             </div>
                                                             <!--end::Input-->
                                                             <div class="col-md-2">
                                                                 <div class="form-check form-check-custom form-check-solid mt-2 mt-md-11">
                                                                     <input class="form-check-input"  name="included" type="checkbox" value="yes" id="form_checkbox" />
                                                                     <label class="form-check-label" for="form_checkbox">
-                                                                        Included
+                                                                        {{__('admin.included')}}
                                                                     </label>
                                                                 </div>
                                                             </div>
@@ -288,7 +288,7 @@
                                                             <div class="col-md-3">
                                                                 <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-flex btn-light-danger mt-3 mt-md-9">
                                                                     <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
-                                                                    Delete Row
+                                                                    {{__('admin.delete row')}}
                                                                 </a>
                                                             </div>
                                                             <!--end::Button-->
@@ -302,7 +302,7 @@
                                             <div class="form-group mt-5">
                                                 <!--begin::Button-->
                                                 <button type="button" data-repeater-create="" class="btn btn-sm btn-light-primary">
-                                                <i class="ki-duotone ki-plus fs-2"></i>Add Service</button>
+                                                <i class="ki-duotone ki-plus fs-2"></i>{{__('admin.add service')}}</button>
                                                 <!--end::Button-->
                                             </div>
                                             <!--end::Form group-->
@@ -316,7 +316,7 @@
                             <div class="mb-0">
                                 <button type="submit" class="btn btn-primary" id="kt_subscriptions_create_button">
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Edit Plan</span>
+                                    <span class="indicator-label">{{__('admin.edit plan')}}</span>
                                     <!--end::Indicator label-->
                                     <!--begin::Indicator progress-->
                                     <span class="indicator-progress">Please wait...

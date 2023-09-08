@@ -70,7 +70,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Weight</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.weight')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -86,7 +86,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Height</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.height')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -102,7 +102,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Blood Type</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.blood type')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -118,7 +118,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Sugar</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.sugar')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -134,7 +134,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Tension</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.tension')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -150,7 +150,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Oxygen</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.oxygen')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -166,7 +166,7 @@
                                 </div>
                                 <!--end::Number-->
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Sleep Hours</div>
+                                <div class="fw-semibold fs-6 text-gray-400">{{__('admin.sleep hours')}}</div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -184,17 +184,17 @@
         <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.view') ? 'active' : ''}}" href="{{route('admin.participants.view',$participant->id)}}">Overview</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.view') ? 'active' : ''}}" href="{{route('admin.participants.view',$participant->id)}}">{{__('admin.overview')}}</a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.document') ? 'active' : ''}} " href="{{route('admin.participants.document',$participant->id)}}">Document</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.document') ? 'active' : ''}} " href="{{route('admin.participants.document',$participant->id)}}">{{__('admin.document')}}</a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.coach') ? 'active' : ''}} " href="{{route('admin.participants.coach',$participant->id)}}">Coach</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{request()->routeIs('admin.participants.coach') ? 'active' : ''}} " href="{{route('admin.participants.coach',$participant->id)}}">{{__('admin.coaches')}}</a>
             </li>
             <!--end::Nav item-->
         </ul>

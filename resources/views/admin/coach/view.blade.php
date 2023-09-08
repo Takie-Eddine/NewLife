@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Specialist</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.coaches')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">Specialists</a>
+                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">{{__('admin.coaches')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -44,7 +44,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">View Specialist</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.view coach')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -68,11 +68,11 @@
                     <div class="card-header cursor-pointer">
                         <!--begin::Card title-->
                         <div class="card-title m-0">
-                            <h3 class="fw-bold m-0">Specialist Details</h3>
+                            <h3 class="fw-bold m-0">{{__('admin.coach details')}}</h3>
                         </div>
                         <!--end::Card title-->
                         <!--begin::Action-->
-                        <a href="{{route('admin.coaches.edit',$coach->id)}}" class="btn btn-sm btn-primary align-self-center">Edit Coach</a>
+                        <a href="{{route('admin.coaches.edit',$coach->id)}}" class="btn btn-sm btn-primary align-self-center">{{__('admin.edit coach')}}</a>
                         <!--end::Action-->
                     </div>
                     <!--begin::Card header-->
@@ -81,7 +81,7 @@
                         <!--begin::Row-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Full Name</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.full name')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -93,7 +93,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Domain</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.domain')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -117,7 +117,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Contact Phone
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.contact phone')}}
                             <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
                                 <i class="ki-duotone ki-information fs-7">
                                     <span class="path1"></span>
@@ -137,7 +137,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Birthday</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.birthday')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
@@ -149,7 +149,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Gender</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.gender')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
@@ -161,14 +161,8 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Country
-                            <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                <i class="ki-duotone ki-information fs-7">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                </i>
-                            </span></label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.country')}}
+                            </label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">
@@ -180,7 +174,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">City</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.city')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
@@ -192,7 +186,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Addres</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.address')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
@@ -204,7 +198,7 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Communication</label>
+                            <label class="col-lg-4 fw-semibold text-muted">{{__('admin.communication')}}</label>
                             <!--end::Label-->
                             <!--begin::Col-->
                             <div class="col-lg-8">

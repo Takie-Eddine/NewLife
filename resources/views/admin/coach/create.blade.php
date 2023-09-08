@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Specialist</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.coaches')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,7 +34,7 @@
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">Specialists</a>
+                            <a href="{{route('admin.coaches')}}" class="text-muted text-hover-primary">{{__('admin.coaches')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -43,7 +43,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Add Specialist</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.add coach')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -64,7 +64,7 @@
                         <!--begin::Card header-->
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_signin_method">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Sign-in Method *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.sign in method')}} *</h3>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@
                                 <div class="d-flex flex-wrap align-items-center">
                                     <!--begin::Label-->
                                     <div id="kt_signin_email">
-                                        <div class="fs-6 fw-bold mb-1">Email Address, Username, Password</div>
+                                        <div class="fs-6 fw-bold mb-1">{{__('admin.email address')}}, {{__('admin.username')}}, {{__('admin.password')}}</div>
                                         <div class="fw-semibold text-gray-600"></div>
                                     </div>
                                     <!--end::Label-->
@@ -97,40 +97,40 @@
                                             <div class="row mb-6">
                                                 <div class="col-lg-6 mb-4 mb-lg-0">
                                                     <div class="fv-row mb-0">
-                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">Enter  Email Address</label>
-                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="Email Address" name="email" value="{{old('email')}}" required/>
+                                                        <label for="emailaddress" class="form-label required fs-6 fw-bold mb-3">{{__('admin.enter email')}}</label>
+                                                        <input type="email" class="form-control form-control-lg form-control-solid" id="emailaddress" placeholder="{{__('admin.email address')}}" name="email" value="{{old('email')}}" required/>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> Username</label>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="Username" required id="confirmemailpassword" value="{{old('name')}}" />
+                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.username')}}</label>
+                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="name" placeholder="{{__('admin.username')}}" required id="confirmemailpassword" value="{{old('name')}}" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> Type</label>
-                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="type" placeholder="Type" required id="confirmemailpassword" value="{{old('type')}}" />
+                                                        <label for="confirmemailpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.domain')}}</label>
+                                                        <input type="text" class="form-control form-control-lg form-control-solid" name="type" placeholder="{{__('admin.domain')}}" required id="confirmemailpassword" value="{{old('type')}}" />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="fv-row mb-0">
-                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> Password</label>
-                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="Password" name="password" id="newpassword" required/>
+                                                        <label for="newpassword" class="form-label required fs-6 fw-bold mb-3"> {{__('admin.password')}}</label>
+                                                        <input type="password" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.password')}}" name="password" id="newpassword" required/>
                                                     </div>
                                                 </div>
-                                                <div class="form-text mb-5">Password must be at least 8 character and contain symbols</div>
+                                                <div class="form-text mb-5">{{__('admin.password must be at least 8 character and contain symbols')}}</div>
                                             </div>
                                             <div class="d-flex">
                                                 {{-- <button id="" type="submit" class="btn btn-primary me-2 px-6">Create </button> --}}
-                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">Cancel</button>
+                                                <button id="kt_signin_cancel" type="button" class="btn btn-color-gray-400 btn-active-light-primary px-6">{{__('admin.cancel')}}</button>
                                             </div>
                                         <!--end::Form-->
                                     </div>
                                     <!--end::Edit-->
                                     <!--begin::Action-->
                                     <div id="kt_signin_email_button" class="ms-auto">
-                                        <button type="button" class="btn btn-light btn-active-light-primary">Create </button>
+                                        <button type="button" class="btn btn-light btn-active-light-primary">{{__('admin.create')}} </button>
                                     </div>
                                     <!--end::Action-->
                                 </div>
@@ -199,7 +199,7 @@
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <!--begin::Card title-->
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Specialist Details *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.coach details')}} *</h3>
                             </div>
 
                             <!--end::Card title-->
@@ -223,7 +223,7 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
+                                        <label class="col-lg-4 col-form-label fw-semibold fs-6">{{__('admin.avatar')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8">
@@ -263,7 +263,7 @@
                                             </div>
                                             <!--end::Image input-->
                                             <!--begin::Hint-->
-                                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                                            <div class="form-text">{{__('admin.allowed')}}.</div>
                                             <!--end::Hint-->
                                         </div>
                                         <!--end::Col-->
@@ -272,7 +272,7 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.full name')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8">
@@ -280,12 +280,12 @@
                                             <div class="row">
                                                 <!--begin::Col-->
                                                 <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="{{old('fname')}}" />
+                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="{{__('admin.first name')}}" value="{{old('fname')}}" />
                                                 </div>
                                                 <!--end::Col-->
                                                 <!--begin::Col-->
                                                 <div class="col-lg-6 fv-row">
-                                                    <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="{{old('lname')}}" />
+                                                    <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.last name')}}" value="{{old('lname')}}" />
                                                 </div>
                                                 <!--end::Col-->
                                             </div>
@@ -299,7 +299,7 @@
                                     <div class="row mb-6">
                                         <!--begin::Label-->
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Contact Phone</span>
+                                            <span class="required">{{__('admin.contact phone')}}</span>
                                             <span class="ms-1" data-bs-toggle="tooltip" title="Phone number must be active">
                                                 <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
                                                     <span class="path1"></span>
@@ -311,7 +311,7 @@
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="Phone number" value="{{old('phone')}}" />
+                                            <input type="tel" name="phone" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.phone number')}}" value="{{old('phone')}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -319,11 +319,11 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Birthday</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.birthday')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input class="form-control form-control-solid" name="birthday" value="{{old('birthday')}}"  placeholder="Pick date " id="kt_datepicker_3"/>
+                                            <input class="form-control form-control-solid" name="birthday" value="{{old('birthday')}}"  placeholder="{{__('admin.pick date')}}" id="kt_datepicker_3"/>
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -331,17 +331,17 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Gender</label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.gender')}}</label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
                                             <div class="form-check-custom ">
                                                 <input type="radio"  name="gender" value="male" class="form-check-input"  @checked(old('gender') == 'male') />
-                                                <label class="form-check-label" for="">Male</label>
+                                                <label class="form-check-label" for="">{{__('admin.male')}}</label>
                                             </div>
                                             <div class="form-check-custom">
                                                 <input type="radio"  name="gender" value="female" class="form-check-input"   @checked(old('gender') == 'female')/>
-                                                <label class="form-check-label" for="">Female</label>
+                                                <label class="form-check-label" for="">{{__('admin.female')}}</label>
                                             </div>
                                         </div>
                                         <!--end::Col-->
@@ -353,20 +353,13 @@
                                     <div class="row mb-6">
                                         <!--begin::Label-->
                                         <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                            <span class="required">Country</span>
-                                            <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                                <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                    <span class="path1"></span>
-                                                    <span class="path2"></span>
-                                                    <span class="path3"></span>
-                                                </i>
-                                            </span>
+                                            <span class="required">{{__('admin.country')}}</span>
                                         </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a country..." class="form-select form-select-solid form-select-lg fw-semibold">
-                                                <option value="">Select a Country...</option>
+                                            <select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="{{__('admin.select country')}}" class="form-select form-select-solid form-select-lg fw-semibold">
+                                                <option value="">{{__('admin.select country')}}</option>
                                                 @foreach ($countries as $country => $value)
                                                     <option value="{{$country}}"  @selected( (old('country')) ==$country )>{{$value}}</option>
                                                 @endforeach
@@ -378,33 +371,33 @@
                                     <!--begin::Input group-->
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">City </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.city')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="city" class="form-control form-control-lg form-control-solid" placeholder="City" value="{{old('city')}}" />
+                                            <input type="text" name="city" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.city')}}" value="{{old('city')}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
 
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Postal Code </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.postal code')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="postal_code" class="form-control form-control-lg form-control-solid" placeholder="Postal Code" value="{{old('postal_code')}}" />
+                                            <input type="text" name="postal_code" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.postal code')}}" value="{{old('postal_code')}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
 
                                     <div class="row mb-6">
                                         <!--begin::Label-->
-                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">Address </label>
+                                        <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{__('admin.address')}} </label>
                                         <!--end::Label-->
                                         <!--begin::Col-->
                                         <div class="col-lg-8 fv-row">
-                                            <input type="text" name="address" class="form-control form-control-lg form-control-solid" placeholder="Address" value="{{old('street_address')}}" />
+                                            <input type="text" name="address" class="form-control form-control-lg form-control-solid" placeholder="{{__('admin.address')}}" value="{{old('street_address')}}" />
                                         </div>
                                         <!--end::Col-->
                                     </div>
@@ -534,7 +527,7 @@
                     <div class="card mb-5 mb-xl-10">
                         <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                             <div class="card-title m-0">
-                                <h3 class="fw-bold m-0">Participant  *</h3>
+                                <h3 class="fw-bold m-0">{{__('admin.participants')}}  *</h3>
                             </div>
                         </div>
                         @if ($errors->any())
@@ -551,18 +544,11 @@
                             <div class="card-body border-top p-9">
                                 <div class="row mb-6">
                                     <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                        <span class="required">Participant </span>
-                                        <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
-                                            <i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>
-                                        </span>
+                                        <span class="required">{{__('admin.participants')}} </span>
                                     </label>
                                     <div class="col-lg-8 fv-row">
-                                        <select name="participants[]" multiple aria-label="Select a Participant" data-control="select2" data-placeholder="Select a Participant..." onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
-                                            <option value=""> Select a Participant...</option>
+                                        <select name="participants[]" multiple aria-label="Select a Participant" data-control="select2" data-placeholder="{{__('admin.select participant')}}" onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
+                                            <option value=""> {{__('admin.select participant')}}</option>
                                             @forelse ($participants as $participant)
                                             <option value="{{$participant->id}}"  @selected( (old('participants')) == $participant->id ) > {{$participant->name}} </option>
                                             @empty
@@ -575,8 +561,8 @@
                     </div>
 
                     <div class="card-footer d-flex justify-content-end py-6 px-9">
-                        <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
-                        <button type="submit" class="btn btn-primary" >Create Specialist</button>
+                        <button type="reset" class="btn btn-light btn-active-light-primary me-2">{{__('admin.discard')}}</button>
+                        <button type="submit" class="btn btn-primary" >{{__('admin.create coach')}}</button>
                     </div>
                 </form>
             </div>

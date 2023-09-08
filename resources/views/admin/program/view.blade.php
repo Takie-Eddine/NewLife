@@ -19,13 +19,13 @@
                     <!--begin::Page title-->
                     <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                         <!--begin::Title-->
-                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Program</h1>
+                        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.program')}}</h1>
                         <!--end::Title-->
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                             <!--begin::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                                <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -34,7 +34,7 @@
                             </li>
                             <!--end::Item-->
                             <li class="breadcrumb-item text-muted">
-                                <a href="{{route('admin.programs')}}" class="text-muted text-hover-primary">Programs</a>
+                                <a href="{{route('admin.programs')}}" class="text-muted text-hover-primary">{{__('admin.programs')}}</a>
                             </li>
                             <!--end::Item-->
                             <!--begin::Item-->
@@ -42,7 +42,7 @@
                                 <span class="bullet bg-gray-400 w-5px h-2px"></span>
                             </li>
                             <!--begin::Item-->
-                            <li class="breadcrumb-item text-muted">View Program</li>
+                            <li class="breadcrumb-item text-muted">{{__('admin.view program')}}</li>
                             <!--end::Item-->
                         </ul>
                         <!--end::Breadcrumb-->
@@ -65,7 +65,7 @@
                                 <!--begin::Card header-->
                                 <div class="card-header">
                                     <div class="card-title">
-                                        <h2 class="fw-bold">Plan </h2>
+                                        <h2 class="fw-bold">{{__('admin.plan')}} </h2>
                                     </div>
                                 </div>
                                 <div class="card-body pt-3">
@@ -92,7 +92,7 @@
                                 <div class="card-header">
 
                                     <div class="card-title">
-                                        <h2>Feature</h2>
+                                        <h2>{{__('admin.feature')}}</h2>
                                     </div>
                                 </div>
                                 <!--end::Card header-->
@@ -143,7 +143,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2>Program</h2>
+                                        <h2>{{__('admin.program')}}</h2>
                                     </div>
                                     <!--end::Card title-->
                                 </div>
@@ -169,7 +169,7 @@
                                     <!--begin::Section-->
                                     <div class="mb-7">
                                         <!--begin::Title-->
-                                        <h5 class="mb-4">Program name</h5>
+                                        <h5 class="mb-4">{{__('admin.program name')}}</h5>
                                         <!--end::Title-->
                                         <!--begin::Details-->
                                         <div class="mb-0">
@@ -188,7 +188,7 @@
                                     <!--begin::Section-->
                                     <div class="mb-10">
                                         <!--begin::Title-->
-                                        <h5 class="mb-4">Program description</h5>
+                                        <h5 class="mb-4">{{__('admin.program description')}}</h5>
                                         <!--end::Title-->
                                         <!--begin::Details-->
                                         <div class="mb-0">
@@ -206,7 +206,7 @@
                                     <!--end::Section-->
                                     <!--begin::Actions-->
                                     <div class="mb-0">
-                                        <a href="{{route('admin.programs.edit',$program->id)}}" class="btn btn-primary" id="kt_subscriptions_create_button">Edit Program</a>
+                                        <a href="{{route('admin.programs.edit',$program->id)}}" class="btn btn-primary" id="kt_subscriptions_create_button">{{__('admin.edit program')}}</a>
                                     </div>
                                     <!--end::Actions-->
                                 </div>
