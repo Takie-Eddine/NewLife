@@ -34,6 +34,8 @@ return[
     'add task' => 'Add Task',
     'meals' => 'Meals',
     'add meal' => 'Add Meal',
+    'messages' => 'Messages',
+    'send' => 'Send',
 
 
 

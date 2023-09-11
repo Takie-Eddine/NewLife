@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Messages</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('sidebar.messages')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -36,13 +36,13 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.messages')}}" class="text-muted text-hover-primary">Inbox</a>
+                            <a href="{{route('admin.messages')}}" class="text-muted text-hover-primary">{{__('sidebar.inbox')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Compose</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.compose')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -224,7 +224,7 @@
                         <!--begin::Card-->
                         <div class="card">
                             <div class="card-header d-flex align-items-center justify-content-between py-3">
-                                <h2 class="card-title m-0">Compose Message</h2>
+                                <h2 class="card-title m-0">{{__('admin.compose message')}}</h2>
 
 
                                 <!--begin::Toggle-->
@@ -265,13 +265,13 @@
                                         <input type="hidden" name="from" value="{{Auth::user('admin')->email}}">
                                         <div class="d-flex align-items-center border-bottom px-8 min-h-50px">
                                             <label class="text-dark fw-bold w-75px">
-                                                <span class="required">To </span>
+                                                <span class="required">{{__('admin.to')}} </span>
                                                 <span class="ms-1" data-bs-toggle="tooltip" title="Country of origination">
                                                 </span>
                                             </label>
 
-                                                <select name="to[]" multiple aria-label="Select a Person" data-control="select2" data-placeholder="Select a Person..." onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
-                                                    <option value=""> Select a Person...</option>
+                                                <select name="to[]" multiple aria-label="Select a Person" data-control="select2" data-placeholder="{{__('admin.select a person')}}" onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
+                                                    <option value=""> {{__('admin.select a person')}}</option>
                                                     @forelse ($coaches as $coach)
                                                     <option value="{{$coach->email}}"  @selected( (old('to')) == $coach->id ) > {{$coach->email}} </option>
                                                     @empty
@@ -290,11 +290,11 @@
                                             <!--end::CC & BCC buttons-->
                                         </div>
                                         <div class="border-bottom">
-                                            <input class="form-control form-control-transparent border-0 px-8 min-h-45px" name="subject" value="{{old('subject')}}" placeholder="Subject" />
+                                            <input class="form-control form-control-transparent border-0 px-8 min-h-45px" name="subject" value="{{old('subject')}}" placeholder="{{__('admin.subject')}}" />
                                         </div>
 
                                         <div class="border-bottom">
-                                            <textarea name="text" placeholder="Enter your message" class="form-control form-control-transparent border-0 px-8 min-h-45px"  cols="30" rows="10">{{old('text')}}</textarea>
+                                            <textarea name="text" placeholder="{{__('admin.enter your message')}}" class="form-control form-control-transparent border-0 px-8 min-h-45px"  cols="30" rows="10">{{old('text')}}</textarea>
                                         </div>
                                     </div>
                                     <!--end::Body-->
@@ -306,7 +306,7 @@
                                             <div class="btn-group me-4">
                                                 <!--begin::Submit-->
                                                 <button type="submit" class="btn btn-primary fs-bold px-6" data-kt-inbox-form="send">
-                                                    <span  class="indicator-label">Send</span>
+                                                    <span  class="indicator-label">{{__('sidebar.send')}}</span>
                                                 </button>
                                                 <!--end::Submit-->
                                                 <!--begin::Send options-->

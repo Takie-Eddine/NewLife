@@ -19,13 +19,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Task</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('admin.tasks')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,13 +34,13 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.tasks')}}" class="text-muted text-hover-primary">Tasks</a>
+                            <a href="{{route('admin.tasks')}}" class="text-muted text-hover-primary">{{__('admin.task')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Add Task</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.add task')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -67,7 +67,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2 class="fw-bold">Task</h2>
+                                        <h2 class="fw-bold">{{__('admin.tasks')}}</h2>
                                     </div>
 
                                     <!--begin::Card title-->
@@ -93,21 +93,21 @@
                                         <!--begin::Label-->
                                         <div class="d-flex flex-column mb-10 fv-row">
                                             <!--begin::Label-->
-                                            <div class="fs-5 fw-bold required form-label mb-3">Name</div>
+                                            <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.name')}}</div>
                                             <!--end::Label-->
-                                            <input class="form-control form-control-solid rounded-3" placeholder="Enter Task name" name="name" value="{{old('name')}}"/>
+                                            <input class="form-control form-control-solid rounded-3" placeholder="{{__('admin.enter task name')}}" name="name" value="{{old('name')}}"/>
                                         </div>
                                         <!--end::Label-->
                                         <div class="d-flex flex-column mb-10 fv-row">
                                             <!--begin::Label-->
-                                            <div class="fs-5 fw-bold required form-label mb-3">Description</div>
+                                            <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.description')}}</div>
                                             <!--end::Label-->
-                                            <textarea class="form-control form-control-solid rounded-3" placeholder="Enter plan description" rows="4" name="description">{{old('description')}}</textarea>
+                                            <textarea class="form-control form-control-solid rounded-3" placeholder="{{__('admin.enter task description')}}" rows="4" name="description">{{old('description')}}</textarea>
                                         </div>
                                         <div class="d-flex flex-column mb-10 fv-row">
-                                            <label class="form-label required">Admin</label>
-                                            <select name="admin" aria-label="Select a Admin"  data-control="select2" data-placeholder="Select a Admin..."  class="form-select form-select-solid fw-bold">
-                                                <option value="">Select a Admin...</option>
+                                            <label class="form-label required">{{__('admin.admin')}}</label>
+                                            <select name="admin" aria-label="Select a Admin"  data-control="select2" data-placeholder="{{__('admin.select admin')}}"  class="form-select form-select-solid fw-bold">
+                                                <option value="">{{__('admin.select admin')}}</option>
                                                 @forelse ($admins as $admin)
                                                 <option value="{{$admin->id}}"{{old('admin') == $admin->id ? 'selected' : null}}>{{$admin->name}}</option>
                                                 @empty
@@ -183,7 +183,7 @@
                             <div class="mb-0">
                                 <button type="submit" class="btn btn-primary" id="kt_subscriptions_create_button">
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Create Task</span>
+                                    <span class="indicator-label">{{__('admin.create task')}}</span>
                                     <!--end::Indicator label-->
                                     <!--begin::Indicator progress-->
                                     <span class="indicator-progress">Please wait...

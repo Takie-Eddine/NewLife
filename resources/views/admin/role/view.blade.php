@@ -22,13 +22,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Role</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.role')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -37,12 +37,12 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.roles')}}" class="text-muted text-hover-primary">Roles</a>
+                            <a href="{{route('admin.roles')}}" class="text-muted text-hover-primary">{{__('admin.roles')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">View Role</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.view role')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="card-footer pt-0">
-                                <a href="{{route('admin.roles.edit',$role->id)}}" class="btn btn-light btn-active-primary" >Edit Role</a>
+                                <a href="{{route('admin.roles.edit',$role->id)}}" class="btn btn-light btn-active-primary" >{{__('admin.edit role')}}</a>
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
                             <div class="card-header pt-5">
                                 <!--begin::Card title-->
                                 <div class="card-title">
-                                    <h2 class="d-flex align-items-center">Admins Assigned
+                                    <h2 class="d-flex align-items-center">{{__('admin.admins assigned')}}
                                     <span class="text-gray-600 fs-6 ms-1">({{$role->admins->count()}})</span></h2>
                                 </div>
                                 <!--end::Card title-->
@@ -98,7 +98,7 @@
                                                 <span class="path1"></span>
                                                 <span class="path2"></span>
                                             </i>
-                                            <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Admins" />
+                                            <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="{{__('admin.search admin')}}" />
                                         </div>
                                     </form>
                                     <!--end::Search-->
@@ -124,9 +124,9 @@
                                                     <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_roles_view_table .form-check-input" value="1" />
                                                 </div>
                                             </th> --}}
-                                            <th class="min-w-50px">ID</th>
-                                            <th class="min-w-150px">User</th>
-                                            <th class="min-w-125px">Created Date</th>
+                                            <th class="min-w-50px">{{__('admin.id')}}</th>
+                                            <th class="min-w-150px">{{__('admin.admin')}}</th>
+                                            <th class="min-w-125px">{{__('admin.created date')}}</th>
                                             {{-- <th class="text-end min-w-100px">Actions</th> --}}
                                         </tr>
                                     </thead>

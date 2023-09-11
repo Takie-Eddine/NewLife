@@ -19,15 +19,15 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Role</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.role')}}</h1>
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">Roles</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.roles')}}</li>
                     </ul>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body pt-1">
-                                    <div class="fw-bold text-gray-600 mb-5">Total admins with this role: {{$role->admins->count()}}</div>
+                                    <div class="fw-bold text-gray-600 mb-5">{{__('admin.total admins with this role')}} ({{$role->admins->count()}})</div>
                                     <div class="d-flex flex-column text-gray-600">
                                         @foreach ($role-> permissions as $permission)
                                             <div class="d-flex align-items-center py-2">
@@ -53,8 +53,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer flex-wrap pt-0">
-                                    <a href="{{route('admin.roles.view',$role->id)}}" class="btn btn-light btn-active-primary my-1 me-2">View Role</a>
-                                    <a href="{{route('admin.roles.edit',$role->id)}}" class="btn btn-light btn-active-light-primary my-1" >Edit Role</a>
+                                    <a href="{{route('admin.roles.view',$role->id)}}" class="btn btn-light btn-active-primary my-1 me-2">{{__('admin.view role')}}</a>
+                                    <a href="{{route('admin.roles.edit',$role->id)}}" class="btn btn-light btn-active-light-primary my-1" >{{__('admin.edit role')}}</a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                     <img src="{{asset('assets/media/illustrations/sketchy-1/4.png')}}" alt="" class="mw-100 mh-150px mb-7" />
                                     <!--end::Illustration-->
                                     <!--begin::Label-->
-                                    <div class="fw-bold fs-3 text-gray-600 text-hover-primary">Add New Role</div>
+                                    <div class="fw-bold fs-3 text-gray-600 text-hover-primary">{{__('admin.add new role')}}</div>
                                     <!--end::Label-->
                                 </a>
                                 <!--begin::Button-->

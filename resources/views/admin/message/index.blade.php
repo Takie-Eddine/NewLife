@@ -20,13 +20,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Messages</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('sidebar.messages')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -35,7 +35,7 @@
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Inbox</li>
+                        <li class="breadcrumb-item text-muted">{{__('sidebar.inbox')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -60,7 +60,7 @@
                             <!--begin::Aside content-->
                             <div class="card-body">
                                 <!--begin::Button-->
-                                <a href="{{route('admin.messages.create')}}" class="btn btn-primary fw-bold w-100 mb-8">New Message</a>
+                                <a href="{{route('admin.messages.create')}}" class="btn btn-primary fw-bold w-100 mb-8">{{__('admin.new message')}}</a>
                                 <!--end::Button-->
                                 <!--begin::Menu-->
                                 <div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-10">
@@ -74,7 +74,7 @@
                                                     <span class="path2"></span>
                                                 </i>
                                             </span>
-                                            <span class="menu-title fw-bold">Inbox</span>
+                                            <span class="menu-title fw-bold">{{__('sidebar.inbox')}}</span>
                                         </a>
                                         {{-- <span class="menu-link active">
                                             <span class="menu-icon">
@@ -129,7 +129,7 @@
                                                     <span class="path2"></span>
                                                 </i>
                                             </span>
-                                            <span class="menu-title fw-bold">Sent</span>
+                                            <span class="menu-title fw-bold">{{__('sidebar.send')}}</span>
                                         </a>
                                         {{-- <span class="menu-link">
                                             <span class="menu-icon">
@@ -287,7 +287,7 @@
                                                     <span class="path1"></span>
                                                     <span class="path2"></span>
                                                 </i>
-                                                <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="Search Inbox" />
+                                                <input type="text" name="keyword" value="{{ old('keyword', request()->input('keyword')) }}"  data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-12" placeholder="{{__('admin.search inbox')}}" />
                                             </div>
                                         </form>
                                     </div>

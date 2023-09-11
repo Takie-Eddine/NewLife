@@ -19,21 +19,21 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Role</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.role')}}</h1>
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.roles')}}" class="text-muted text-hover-primary">Roles</a>
+                            <a href="{{route('admin.roles')}}" class="text-muted text-hover-primary">{{__('admin.roles')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">Add Role</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.add role')}}</li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div >
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h2 class="fw-bold">Add a Role</h2>
+                                <h2 class="fw-bold">{{__('admin.add role')}}</h2>
                             </div>
                             @if ($errors->any())
                                         <div class="alert alert-danger">
@@ -61,12 +61,12 @@
                                     <div class="d-flex flex-column scroll-y me-n7 pe-7"   data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_add_role_header" data-kt-scroll-wrappers="#kt_modal_add_role_scroll" data-kt-scroll-offset="300px">
                                         <div class="fv-row mb-10">
                                             <label class="fs-5 fw-bold form-label mb-2">
-                                                <span class="required">Role name</span>
+                                                <span class="required">{{__('admin.role name')}}</span>
                                             </label>
-                                            <input class="form-control form-control-solid" placeholder="Enter a role name" name="name" value="{{old('name')}}" />
+                                            <input class="form-control form-control-solid" placeholder="{{__('admin.enter a role name')}}" name="name" value="{{old('name')}}" />
                                         </div>
                                         <div class="fv-row">
-                                            <label class="fs-5 fw-bold form-label mb-2">Role Permissions</label>
+                                            <label class="fs-5 fw-bold form-label mb-2">{{__('admin.role permissions')}}</label>
                                             <div class="table-responsive">
                                                 <table class="table align-middle table-row-dashed fs-6 gy-5">
                                                     <tbody class="text-gray-600 fw-semibold">
@@ -95,7 +95,7 @@
                                                                     <div class="d-flex">
                                                                         <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
                                                                             <input class="form-check-input" type="checkbox" value="{{ $name }}" name="permissions[]" />
-                                                                            <span class="form-check-label">Check</span>
+                                                                            <span class="form-check-label">{{__('admin.check')}}</span>
                                                                         </label>
 
                                                                         {{-- <label class="form-check form-check-sm form-check-custom form-check-solid me-5 me-lg-20">
@@ -118,7 +118,7 @@
                                     </div>
                                     <div class="card-footer d-flex justify-content-end py-6 px-9">
                                         {{-- <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button> --}}
-                                        <button type="submit" class="btn btn-primary" >Create Role</button>
+                                        <button type="submit" class="btn btn-primary" >{{__('admin.create role')}}</button>
                                     </div>
                                 </form>
                             </div>

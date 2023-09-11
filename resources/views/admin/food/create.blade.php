@@ -19,13 +19,13 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> Food</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0"> {{__('admin.food')}}</h1>
                     <!--end::Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -34,13 +34,13 @@
                         </li>
                         <!--end::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.foods')}}" class="text-muted text-hover-primary">foods</a>
+                            <a href="{{route('admin.foods')}}" class="text-muted text-hover-primary">{{__('admin.foods')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
                         <!--begin::Item-->
-                        <li class="breadcrumb-item text-muted">Add Food</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.add food')}}</li>
                         <!--end::Item-->
                     </ul>
                     <!--end::Breadcrumb-->
@@ -67,7 +67,7 @@
                                 <div class="card-header">
                                     <!--begin::Card title-->
                                     <div class="card-title">
-                                        <h2 class="fw-bold">Food</h2>
+                                        <h2 class="fw-bold">{{__('admin.food')}}</h2>
                                     </div>
 
                                     <!--begin::Card title-->
@@ -92,9 +92,9 @@
                                         <!--begin::Label-->
                                         <div class="d-flex flex-column mb-10 fv-row">
                                             <!--begin::Label-->
-                                            <div class="fs-5 fw-bold required form-label mb-3">Date</div>
+                                            <div class="fs-5 fw-bold required form-label mb-3">{{__('admin.date')}}</div>
                                             <!--end::Label-->
-                                            <input class="form-control form-control-solid" name="date" value="{{old('date')}}"  placeholder="Pick date " id="kt_datepicker_3"/>
+                                            <input class="form-control form-control-solid" name="date" value="{{old('date')}}"  placeholder="{{__('admin.pick date')}}" id="kt_datepicker_3"/>
 
                                         </div>
                                         <!--end::Label-->
@@ -164,32 +164,32 @@
                                                     <div data-repeater-item>
                                                         <div class="form-group row mb-5">
                                                             <div class="col-md-3">
-                                                                <label class="form-label required">Type</label>
+                                                                <label class="form-label required">{{__('admin.type')}}</label>
                                                                 <select class="form-select" name="type" data-placeholder="Select a Type" data-kt-ecommerce-catalog-add-category="condition_type">
-                                                                        <option value="breakfast"{{old('type') == 'breakfast' ? 'selected' : null}}>Breakfast</option>
-                                                                        <option value="lunch"{{old('type') == 'lunch' ? 'selected' : null}}>Lunch</option>
-                                                                        <option value="dinner"{{old('type') == 'dinner' ? 'selected' : null}}>Dinner</option>
+                                                                        <option value="breakfast"{{old('type') == 'breakfast' ? 'selected' : null}}>{{__('admin.breakfast')}}</option>
+                                                                        <option value="lunch"{{old('type') == 'lunch' ? 'selected' : null}}>{{__('admin.lunch')}}</option>
+                                                                        <option value="dinner"{{old('type') == 'dinner' ? 'selected' : null}}>{{__('admin.dinner')}}</option>
                                                                 </select>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <div class="inner-repeater">
                                                                     <div data-repeater-list="meals" class="mb-5">
                                                                         <div data-repeater-item>
-                                                                            <label class="form-label required">Name</label>
+                                                                            <label class="form-label required">{{__('admin.name')}}</label>
                                                                             <div class="input-group pb-3">
-                                                                                <input type="text" class="form-control" placeholder="Enter meal name" name="name" value="{{old('name')}}" />
+                                                                                <input type="text" class="form-control" placeholder="{{__('admin.enter meal name')}}" name="name" value="{{old('name')}}" />
                                                                                 <button class="border border-secondary btn btn-icon btn-flex btn-light-danger" data-repeater-delete type="button">
                                                                                     <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
                                                                                 </button>
                                                                             </div>
-                                                                            <label class="form-label required">Description</label>
+                                                                            <label class="form-label required">{{__('admin.description')}}</label>
                                                                             <div class="input-group pb-3">
-                                                                                <textarea class="form-control form-control-solid rounded-3" placeholder="Enter plan description" rows="4" name="description">{{old('description')}}</textarea>
+                                                                                <textarea class="form-control form-control-solid rounded-3" placeholder="{{__('admin.enter meal description')}}" rows="4" name="description">{{old('description')}}</textarea>
                                                                                 <button class="border border-secondary btn btn-icon btn-flex btn-light-danger" data-repeater-delete type="button">
                                                                                     <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
                                                                                 </button>
                                                                             </div>
-                                                                            <label class="form-label required">Image</label>
+                                                                            <label class="form-label required">{{__('admin.image')}}</label>
                                                                             <div class="input-group pb-3">
                                                                                 <input type="file" class="form-control" placeholder="" name="image"  />
                                                                                 <button class="border border-secondary btn btn-icon btn-flex btn-light-danger" data-repeater-delete type="button">
@@ -201,14 +201,14 @@
                                                                     </div>
                                                                     <button class="btn btn-sm btn-flex btn-light-primary" data-repeater-create type="button">
                                                                         <i class="ki-duotone ki-plus fs-5"></i>
-                                                                        Add Type
+                                                                        {{__('admin.add type')}}
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <a href="javascript:;" data-repeater-delete class="btn btn-sm btn-flex btn-light-danger mt-3 mt-md-9">
                                                                     <i class="ki-duotone ki-trash fs-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
-                                                                    Delete Row
+                                                                    {{__('admin.delete row')}}
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -221,7 +221,7 @@
                                             <div class="form-group">
                                                 <a href="javascript:;" data-repeater-create class="btn btn-flex btn-light-primary">
                                                     <i class="ki-duotone ki-plus fs-3"></i>
-                                                    Add Mael
+                                                    {{__('admin.add meal')}}
                                                 </a>
                                             </div>
                                             <!--end::Form group-->
@@ -234,7 +234,7 @@
                             <div class="mb-0">
                                 <button type="submit" class="btn btn-primary" id="kt_subscriptions_create_button">
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Create Food</span>
+                                    <span class="indicator-label">{{__('admin.create food')}}</span>
                                     <!--end::Indicator label-->
                                     <!--begin::Indicator progress-->
                                     <span class="indicator-progress">Please wait...

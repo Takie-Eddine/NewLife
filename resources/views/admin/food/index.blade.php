@@ -19,15 +19,15 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Food</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.food')}}</h1>
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">Home</a>
+                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
                         </li>
-                        <li class="breadcrumb-item text-muted">Foods</li>
+                        <li class="breadcrumb-item text-muted">{{__('admin.foods')}}</li>
                     </ul>
                 </div>
             </div>
@@ -56,9 +56,9 @@
                                 @empty
                                 @endforelse
                                 <div class="card-footer flex-wrap pt-0">
-                                    <a href="{{route('admin.foods.view',$food->id)}}" class="btn btn-light btn-active-primary my-1 me-2">View Food</a>
-                                    <a href="{{route('admin.foods.edit',$food->id)}}" class="btn btn-light btn-active-light-primary my-1 me-2" >Edit Food</a>
-                                    <a href="{{route('admin.foods.delete',$food->id)}}" class="btn btn-light btn-active-light-danger my-1" >Delete Food</a>
+                                    <a href="{{route('admin.foods.view',$food->id)}}" class="btn btn-light btn-active-primary my-1 me-2">{{__('admin.view food')}}</a>
+                                    <a href="{{route('admin.foods.edit',$food->id)}}" class="btn btn-light btn-active-light-primary my-1 me-2" >{{__('admin.edit food')}}</a>
+                                    <a href="{{route('admin.foods.delete',$food->id)}}" class="btn btn-light btn-active-light-danger my-1" >{{__('admin.delete food')}}</a>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@
                                     <img src="{{asset('assets/media/illustrations/sketchy-1/4.png')}}" alt="" class="mw-100 mh-150px mb-7" />
                                     <!--end::Illustration-->
                                     <!--begin::Label-->
-                                    <div class="fw-bold fs-3 text-gray-600 text-hover-primary">Add New Food</div>
+                                    <div class="fw-bold fs-3 text-gray-600 text-hover-primary">{{__('admin.add new food')}}</div>
                                     <!--end::Label-->
                                 </a>
                                 <!--begin::Button-->

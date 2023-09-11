@@ -215,24 +215,24 @@
                                                 </button>
                                                 <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" data-kt-menu-id="kt-users-tasks">
                                                     <div class="px-7 py-5">
-                                                        <div class="fs-5 text-dark fw-bold">Update Status</div>
+                                                        <div class="fs-5 text-dark fw-bold">{{__('admin.status update')}}</div>
                                                     </div>
                                                     <div class="separator border-gray-200"></div>
                                                     <form class="form px-7 py-5" action="{{route('admin.users.status',$task->id)}}"  method="POST"  data-kt-menu-id="kt-users-tasks-form">
                                                         @csrf
                                                         <div class="fv-row mb-10">
-                                                            <label class="form-label fs-6 fw-semibold">Status:</label>
-                                                            <select class="form-select form-select-solid" name="status" data-kt-select2="true" data-placeholder="Select option" data-allow-clear="true" data-hide-search="true">
-                                                                <option value="">Select a Status...</option>
-                                                                <option value="Pending" {{$task->status == "Pending" ? 'selected' : null}}>Pending</option>
-                                                                <option value="In Progress" {{$task->status == "In Progress" ? 'selected' : null}}>In Progress</option>
-                                                                <option value="Completed" {{$task->status == "Completed" ? 'selected' : null}}>Completed</option>
+                                                            <label class="form-label fs-6 fw-semibold">{{__('admin.status')}}</label>
+                                                            <select class="form-select form-select-solid" name="status" data-kt-select2="true" data-placeholder="{{__('admin.select status')}}" data-allow-clear="true" data-hide-search="true">
+                                                                <option value="">{{__('admin.select status')}}</option>
+                                                                <option value="Pending" {{$task->status == "Pending" ? 'selected' : null}}>{{__('admin.pending')}}</option>
+                                                                <option value="In Progress" {{$task->status == "In Progress" ? 'selected' : null}}>{{__('admin.in progress')}}</option>
+                                                                <option value="Completed" {{$task->status == "Completed" ? 'selected' : null}}>{{__('admin.complete')}}</option>
                                                             </select>
                                                         </div>
                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-users-update-task-status="reset">Reset</button>
+                                                            <button type="button" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-users-update-task-status="reset">{{__('admin.reset')}}</button>
                                                             <button type="submit" class="btn btn-sm btn-primary" data-kt-users-update-task-status="submit">
-                                                                <span class="indicator-label">Apply</span>
+                                                                <span class="indicator-label">{{__('admin.apply')}}</span>
                                                                 <span class="indicator-progress">Please wait...
                                                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                             </button>

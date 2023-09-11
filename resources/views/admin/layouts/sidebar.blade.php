@@ -532,10 +532,10 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Messages</span>
-                                <span class="menu-badge">
-                                    <span class="badge badge-success">3</span>
-                                </span>
+                                <span class="menu-title">{{__('sidebar.messages')}}</span>
+                                {{-- <span class="menu-badge">
+                                    <span class="badge badge-success">{{\App\Models\Message::count()}}</span>
+                                </span> --}}
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -547,19 +547,7 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Send</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/inbox/reply.html">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">View & Reply</span>
+                                <span class="menu-title">{{__('sidebar.send')}}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
