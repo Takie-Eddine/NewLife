@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Coach;
 
 use App\Http\Controllers\Controller;
+use App\Models\Coach;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,10 +21,10 @@ class ProfileController extends Controller
 {
     public function index(){
 
-        $admin = Auth::user();
+        $coach = Auth::user();
 
-        return view('admin.profile.index',[
-            'admin' => $admin,
+        return view('coach.profile.index',[
+            'coach' => $coach,
         ]);
 
     }
@@ -31,10 +32,10 @@ class ProfileController extends Controller
 
     public function edit ($id){
 
-        $admin = User::findOrFail($id);
+        $coach = Coach::findOrFail($id);
 
-        return view('admin.profile.edit',[
-            'admin' => $admin,
+        return view('coach.profile.edit',[
+            'coach' => $coach,
             'countries' => Countries::getNames(),
             'locales' => Languages::getNames(),
         ]);
@@ -61,16 +62,16 @@ class ProfileController extends Controller
         ]);
 
 
-        $admin = $request->user();
+        $coach = $request->user();
 
         if ($photo = $request->file('avatar')) {
-            if(File::exists('images/profile/'.$admin->profile->photo) && $admin->profile->photo) {
-                unlink('images/profile/'.$admin->profile->photo);
-                $admin->profile->photo = null ;
-                $admin->profile->save();
+            if(File::exists('images/coach/'.$coach->profile->photo) && $coach->profile->photo) {
+                unlink('images/coach/'.$coach->profile->photo);
+                $coach->profile->photo = null ;
+                $coach->profile->save();
             }
             $file_name = Str::slug($request->fname).".".$photo->getClientOriginalExtension();
-            $path = public_path('/images/profile/' .$file_name);
+            $path = public_path('/images/coach/' .$file_name);
             Image::make($photo->getRealPath())->resize(500,null,function($constraint){
                 $constraint->aspectRatio();
             })->save($path,100);
@@ -90,7 +91,7 @@ class ProfileController extends Controller
         $input['postal_code'] = $request-> postal_code;
 
 
-        $admin->profile->fill($input)->save();
+        $coach->profile->fill($input)->save();
 
         return redirect()->back()->with([
             'message' => 'Updated successfully',
@@ -104,15 +105,15 @@ class ProfileController extends Controller
     public function update_email(Request $request){
 
         $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users','email')->ignore(Auth::user()->id)],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('coaches','email')->ignore(Auth::user()->id)],
         ]);
-        $admin = $request->user();
-        $admin->update([
+        $coach = $request->user();
+        $coach->update([
             'email' => $request->email,
         ]);
 
-        $admin->email_verified_at = null;
-        $admin->save();
+        $coach->email_verified_at = null;
+        $coach->save();
 
         Auth::guard('web')->logout();
 
@@ -131,8 +132,8 @@ class ProfileController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $admin = $request->user();
-        $admin->update([
+        $coach = $request->user();
+        $coach->update([
             'password' => Hash::make($request->password),
         ]);
 
@@ -150,11 +151,11 @@ class ProfileController extends Controller
             'deactivate' => ['required'],
         ]);
 
-        $admin = $request->user();
+        $coach = $request->user();
 
         Auth::logout();
 
-        $admin->delete();
+        $coach->delete();
 
         $request->session()->invalidate();
         $request->session()->regenerateToken();

@@ -97,7 +97,7 @@ class ParticipantController extends Controller
             ]);
 
             if ($photo = $request->file('avatar')) {
-                $file_name = uploadImage($photo, 'participant', $request->name);
+                $file_name = uploadImage($photo, 'profile', $request->name);
                 $input['photo'] =  $file_name;
             }
 
@@ -229,8 +229,8 @@ class ParticipantController extends Controller
             }
 
             if ($photo = $request->file('avatar')) {
-                UnlinkImage('participant',$participant->photo,$participant);
-                $file_name = uploadImage($photo, 'participant', $request->name);
+                UnlinkImage('profile',$participant->photo,$participant);
+                $file_name = uploadImage($photo, 'profile', $request->name);
                 $input['photo'] =  $file_name;
             }
 

@@ -248,5 +248,4 @@ return [
     'contacts' => 'Contacts',
     'search contacts' => 'Search Contacts',
 
-
 ];
