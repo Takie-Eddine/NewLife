@@ -67,4 +67,8 @@ class CalenderController extends Controller
         return redirect()->route('admin.calenders');
 
     }
+
+    public function view($id){
+
+    }
 }
