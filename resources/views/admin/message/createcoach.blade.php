@@ -257,7 +257,7 @@
                                 @endif
                             <div class="card-body p-0">
                                 <!--begin::Form-->
-                                <form id="kt_inbox_compose_form" action="{{route('admin.messages.store')}}" method="POST">
+                                <form id="kt_inbox_compose_form" action="{{route('admin.messages.storecoach')}}" method="POST">
                                     @csrf
                                     <!--begin::Body-->
                                     <div class="d-block">
@@ -268,19 +268,17 @@
                                                 <span class="required">{{__('admin.to')}} </span>
                                                 </span>
                                             </label>
-
                                                 <select name="to[]" multiple aria-label="Select a Person" data-control="select2" data-placeholder="{{__('admin.select a person')}}" onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
                                                     <option value=""> {{__('admin.select a person')}}</option>
-                                                    @forelse ($participants as $participant)
+                                                    {{-- @forelse ($participants as $participant)
                                                     <option value="{{$participant->email}}"  @selected( (old('to')) == $participant->id ) > {{$participant->email}} </option>
                                                     @empty
-                                                    @endforelse
-                                                    {{-- @forelse ($admins as $admin)
-                                                    <option value="{{$admin->email}}"  @selected( (old('to')) == $admin->id ) > {{$admin->email}} </option>
-                                                    @empty
                                                     @endforelse --}}
+                                                    @forelse ($coaches as $coach)
+                                                    <option value="{{$coach->email}}"  @selected( (old('to')) == $coach->id ) > {{$coach->email}} </option>
+                                                    @empty
+                                                    @endforelse
                                                 </select>
-
                                             <!--begin::CC & BCC buttons-->
                                             {{-- <div class="ms-auto w-75px text-end">
                                                 <span class="text-muted fs-bold cursor-pointer text-hover-primary me-2" data-kt-inbox-form="cc_button">Cc</span>

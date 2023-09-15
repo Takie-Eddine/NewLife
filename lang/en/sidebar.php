@@ -35,8 +35,10 @@ return[
     'meals' => 'Meals',
     'add meal' => 'Add Meal',
     'messages' => 'Messages',
+    'send to admin' => 'Send To Admin',
+    'send to participant' => 'Send To Participant',
+    'send to coach' => 'Send To Coach',
     'send' => 'Send',
-
 
 
 ];

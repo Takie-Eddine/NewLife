@@ -29,4 +29,18 @@ return[
     'last active' => 'Last Active',
     'message' => 'Message',
     'chat' => 'Chat',
+    'no defined' => 'No Data Defined.',
+    'recive' => 'Recived' ,
+    'to' => 'To',
+    'from' => 'From',
+    'date' => 'Date',
+    'calendar' => 'Calendar',
+    'add event' => 'Add Event',
+    'event name' => 'Event Name',
+    'event description' => 'Event Description',
+    'event start date' => 'Event Start Date',
+    'event start time' => 'Event Start Time',
+    'event end date' => 'Event End Date',
+    'event end time' => 'Event End Time',
+
 ];

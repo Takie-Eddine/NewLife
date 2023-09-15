@@ -70,4 +70,7 @@ class Coach  extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(User::class,'coach_participants');
     }
 
+
+
+
 }

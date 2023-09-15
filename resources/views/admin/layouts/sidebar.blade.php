@@ -547,7 +547,17 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">{{__('sidebar.send')}}</span>
+                                <span class="menu-title">{{__('sidebar.send to participant')}}</span>
+                            </a>
+                            <!--end:Menu link-->
+                        </div>
+                        <div class="menu-item">
+                            <!--begin:Menu link-->
+                            <a class="menu-link" href="{{route('admin.messages.createcoach')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span>
+                                <span class="menu-title">{{__('sidebar.send to coach')}}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>

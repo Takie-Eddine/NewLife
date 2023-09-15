@@ -247,5 +247,6 @@ return [
     'contact list' => 'قائمة التواصل',
     'contacts' => 'التواصل',
     'search contacts' => 'البحث عن التواصل',
+    'view & reply' => 'عرض ورد'
 
 ];

@@ -181,9 +181,13 @@ Route::group(
             Route::group(['prefix'=>'message'  ],function(){
                 Route::get('/', [MessageController::class, 'index'])->name('messages');
                 Route::get('/create', [MessageController::class, 'create'])->name('messages.create');
+                Route::get('/create-coach', [MessageController::class, 'createcoach'])->name('messages.createcoach');
                 Route::post('/store', [MessageController::class, 'store'])->name('messages.store');
+                Route::post('/store-coach', [MessageController::class, 'storecoach'])->name('messages.storecoach');
                 Route::get('/view/{id}', [MessageController::class, 'view'])->name('messages.view');
                 Route::get('/send', [MessageController::class, 'send'])->name('messages.send');
+                Route::get('/recive', [MessageController::class, 'recive'])->name('messages.recive');
+
             });
 
             Route::group(['prefix'=>'chat'  ],function(){
@@ -211,6 +215,10 @@ Route::group(
 
 
             // });
+            Route::group(['prefix' =>'contact'], function () {
+                Route::get('/', [ContactController::class, 'index'])->name('contacts');
+                Route::get('/view/{id}', [ContactController::class, 'view'])->name('contacts.view');
+            });
         });
 
 });

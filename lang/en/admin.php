@@ -247,5 +247,5 @@ return [
     'contact list' => 'Contact List',
     'contacts' => 'Contacts',
     'search contacts' => 'Search Contacts',
-
+    'view & reply' => 'View & Reply',
 ];

@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Coach;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
-use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -16,15 +15,14 @@ class ContactController extends Controller
         })
         ->get();
 
-        return view('admin.contact.index',compact('admins'));
+        return view('coach.contact.index',compact('admins'));
     }
-
 
 
     public function view($id){
 
         $admin = Admin::findOrFail($id);
 
-        return view('admin.contact.view',compact('admin'));
+        return view('coach.contact.view',compact('admin'));
     }
 }

@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\Coach\CalenderController;
+use App\Http\Controllers\Coach\ContactController;
 use App\Http\Controllers\Coach\DashboardController;
 use App\Http\Controllers\Coach\FacilityController;
 use App\Http\Controllers\Coach\FileController;
+use App\Http\Controllers\Coach\FoodController;
+use App\Http\Controllers\Coach\MessageController;
 use App\Http\Controllers\Coach\ParticipantsController;
 use App\Http\Controllers\Coach\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -59,7 +63,18 @@ Route::group(
 
             Route::group(['prefix'=>'food'  ],function(){
                 Route::get('/', [FoodController::class, 'index'])->name('foods');
-                Route::get('/view/{id}', [FoodController::class, 'view'])->name('foods.view');
+                // Route::get('/view/{id}', [FoodController::class, 'view'])->name('foods.view');
+            });
+
+            Route::group(['prefix'=>'message'  ],function(){
+                Route::get('/', [MessageController::class, 'index'])->name('messages');
+                Route::get('/create', [MessageController::class, 'create'])->name('messages.create');
+                Route::get('/create-admin', [MessageController::class, 'createadmin'])->name('messages.createadmin');
+                Route::post('/store', [MessageController::class, 'store'])->name('messages.store');
+                Route::post('/store-admin', [MessageController::class, 'storeadmin'])->name('messages.storeadmin');
+                Route::get('/view/{id}', [MessageController::class, 'view'])->name('messages.view');
+                Route::get('/send', [MessageController::class, 'send'])->name('messages.send');
+                Route::get('/recive', [MessageController::class, 'recive'])->name('messages.recive');
             });
 
             Route::group(['prefix' =>'contact'], function () {
@@ -67,7 +82,9 @@ Route::group(
                 Route::get('/view/{id}', [ContactController::class, 'view'])->name('contacts.view');
             });
 
-
+            Route::group(['prefix'=>'calender'  ],function(){
+                Route::get('/', [CalenderController::class, 'index'])->name('calenders');
+            });
 
 
 

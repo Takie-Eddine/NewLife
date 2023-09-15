@@ -1,7 +1,7 @@
-@extends('admin.layouts.admin')
+@extends('coach.layouts.coach')
 
 
-@section('title', 'Admin')
+@section('title', 'Coach')
 
 
 @push('style')
@@ -26,7 +26,7 @@
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
+                            <a href="{{route('coach.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -36,7 +36,7 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.messages')}}" class="text-muted text-hover-primary">{{__('sidebar.inbox')}}</a>
+                            <a href="{{route('coach.messages')}}" class="text-muted text-hover-primary">{{__('sidebar.inbox')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
@@ -257,12 +257,12 @@
                                 @endif
                             <div class="card-body p-0">
                                 <!--begin::Form-->
-                                <form id="kt_inbox_compose_form" action="{{route('admin.messages.store')}}" method="POST">
+                                <form id="kt_inbox_compose_form" action="{{route('coach.messages.store')}}" method="POST">
                                     @csrf
                                     <!--begin::Body-->
                                     <div class="d-block">
                                         <!--begin::To-->
-                                        <input type="hidden" name="from" value="{{Auth::user('admin')->email}}">
+                                        <input type="hidden" name="from" value="{{Auth::user('coach')->email}}">
                                         <div class="d-flex align-items-center border-bottom px-8 min-h-50px">
                                             <label class="text-dark fw-bold w-75px">
                                                 <span class="required">{{__('admin.to')}} </span>

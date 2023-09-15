@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Coach;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use App\Models\Coach;
 use App\Models\Message;
 use App\Models\User;
-use App\Rules\EmailExists;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
@@ -16,61 +15,38 @@ class MessageController extends Controller
 {
     public function index(){
 
-        $admin = Auth::user('admin');
+        $coach = Auth::user('coach');
 
-        $messages = Message::where('from',$admin->email)->orWhere('to',$admin->email)
+        $messages = Message::where('from',$coach->email)->orWhere('to',$coach->email)
         ->when(request()->keyword != null,function ($query){
             $query->search(request()->keyword);
-        })->get();
+        })->orderBy('created_at', 'desc')
+        ->paginate(10);
 
 
-        return view('admin.message.index',compact('messages'));
+        return view('coach.message.index',compact('messages'));
     }
 
 
     public function create(){
 
-        $coaches = Coach::all();
+        $admins = Admin::all();
         $participants = User::all();
-        return view('admin.message.create',compact('coaches','participants'));
-    }
-
-    public function createcoach(){
-        $coaches = Coach::all();
-        $participants = User::all();
-        return view('admin.message.createcoach',compact('coaches','participants'));
+        return view('coach.message.create',compact('participants','admins'));
     }
 
 
-    // public function store(Request $request){
+    public function createadmin(){
+        $admins = Admin::all();
+        $participants = User::all();
+        return view('coach.message.createadmin',compact('participants','admins'));
+    }
 
-    //     //return $request ;
-    //     $request->validate([
-    //         'from' => ['required',Rule::exists('admins','email')],
-    //         'to' => ['required'],
-    //         'cc' => ['nullable',],
-    //         'subject' => ['nullable','string','max:190'],
-    //         'text' => ['required',],
-    //     ]);
-
-    //     foreach ($request->to as $to) {
-    //         $message = Message::create([
-    //             'from' => $request->from,
-    //             'to' => $to,
-    //             'cc' => $request->cc,
-    //             'subject' => $request->subject,
-    //             'text' =>  $request->text,
-    //         ]);
-    //     }
-    //     toastr()->success('Created successfully!', 'Congrats', ['timeOut' => 5000]);
-    //     return redirect()->route('admin.messages');
-
-    // }
 
     public function store(Request $request){
 
         $request->validate([
-            'from' => ['required', Rule::exists('admins','email')],
+            'from' => ['required', Rule::exists('coaches','email')],
             'to' => ['required', Rule::exists('users','email')],
             'cc' => ['nullable',],
             'subject' => ['nullable','string','max:190'],
@@ -82,7 +58,7 @@ class MessageController extends Controller
         foreach ($request->to as $to) {
             $message = Message::create([
                 'sender_id' => Auth::user()->id,
-                'sender_type' => 'admin',
+                'sender_type' => 'coach',
                 'reciver_id' => $participant->id ,
                 'reciver_type' => 'user',
                 'reply' => 0,
@@ -94,29 +70,29 @@ class MessageController extends Controller
             ]);
         }
         toastr()->success('Created successfully!', 'Congrats', ['timeOut' => 5000]);
-        return redirect()->route('admin.messages');
+        return redirect()->route('coach.messages');
 
     }
 
-    public function storecoach(Request $request){
+    public function storeadmin(Request $request){
 
 
         $request->validate([
-            'from' => ['required', Rule::exists('admins','email')],
-            'to' => ['required', Rule::exists('coaches','email')],
+            'from' => ['required', Rule::exists('coaches','email')],
+            'to' => ['required', Rule::exists('admins','email')],
             'cc' => ['nullable',],
             'subject' => ['nullable','string','max:190'],
             'text' => ['required',],
         ]);
 
-        $admin = Coach::where('email','=',$request->to)->first();
+        $admin = Admin::where('email','=',$request->to)->first();
 
         foreach ($request->to as $to) {
             $message = Message::create([
                 'sender_id' => Auth::user()->id,
-                'sender_type' => 'admin',
+                'sender_type' => 'coach',
                 'reciver_id' => $admin->id,
-                'reciver_type' => 'coach',
+                'reciver_type' => 'admin',
                 'reply' => 0,
                 'from' => $request->from,
                 'to' => $to,
@@ -126,33 +102,35 @@ class MessageController extends Controller
             ]);
         }
         toastr()->success('Created successfully!', 'Congrats', ['timeOut' => 5000]);
-        return redirect()->route('admin.messages');
+        return redirect()->route('coach.messages');
 
     }
 
 
     public function send(){
-        $admin = Auth::user('admin');
+        $coach = Auth::user('coach');
 
-        $messages = Message::where('from',$admin->email)
+        $messages = Message::where('from',$coach->email)
         ->when(request()->keyword != null,function ($query){
             $query->search(request()->keyword);
-        })->get();
+        })->orderBy(\request()->sort_by ?? 'id', \request()->order_by ?? 'desc')
+        ->paginate(\request()->limit_by ?? 10);
 
 
-        return view('admin.message.index',compact('messages'));
+        return view('coach.message.index',compact('messages'));
     }
 
     public function recive(){
-        $admin = Auth::user('admin');
+        $coach = Auth::user('coach');
 
-        $messages = Message::where('to',$admin->email)
+        $messages = Message::where('to',$coach->email)
         ->when(request()->keyword != null,function ($query){
             $query->search(request()->keyword);
-        })->get();
+        })->orderBy(\request()->sort_by ?? 'id', \request()->order_by ?? 'desc')
+        ->paginate(\request()->limit_by ?? 10);
 
 
-        return view('admin.message.index',compact('messages'));
+        return view('coach.message.index',compact('messages'));
     }
 
 
@@ -186,9 +164,7 @@ class MessageController extends Controller
             $sender = User::whereId($message->sender_id)->first();
         }
 
-        return view('admin.message.view',compact('message','reciver','sender'));
+        return view('coach.message.view',compact('message','reciver','sender'));
 
     }
-
-
 }

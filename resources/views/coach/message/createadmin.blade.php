@@ -1,7 +1,7 @@
-@extends('admin.layouts.admin')
+@extends('coach.layouts.coach')
 
 
-@section('title', 'Admin')
+@section('title', 'Coach')
 
 
 @push('style')
@@ -26,7 +26,7 @@
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
+                            <a href="{{route('coach.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -36,7 +36,7 @@
                         <!--end::Item-->
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('admin.messages')}}" class="text-muted text-hover-primary">{{__('sidebar.inbox')}}</a>
+                            <a href="{{route('coach.messages')}}" class="text-muted text-hover-primary">{{__('sidebar.inbox')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
@@ -257,30 +257,28 @@
                                 @endif
                             <div class="card-body p-0">
                                 <!--begin::Form-->
-                                <form id="kt_inbox_compose_form" action="{{route('admin.messages.store')}}" method="POST">
+                                <form id="kt_inbox_compose_form" action="{{route('coach.messages.storeadmin')}}" method="POST">
                                     @csrf
                                     <!--begin::Body-->
                                     <div class="d-block">
                                         <!--begin::To-->
-                                        <input type="hidden" name="from" value="{{Auth::user('admin')->email}}">
+                                        <input type="hidden" name="from" value="{{Auth::user('coach')->email}}">
                                         <div class="d-flex align-items-center border-bottom px-8 min-h-50px">
                                             <label class="text-dark fw-bold w-75px">
                                                 <span class="required">{{__('admin.to')}} </span>
                                                 </span>
                                             </label>
-
                                                 <select name="to[]" multiple aria-label="Select a Person" data-control="select2" data-placeholder="{{__('admin.select a person')}}" onchange="console.log($(this).val())" class="form-select form-select-solid form-select-lg fw-semibold">
                                                     <option value=""> {{__('admin.select a person')}}</option>
-                                                    @forelse ($participants as $participant)
+                                                    {{-- @forelse ($participants as $participant)
                                                     <option value="{{$participant->email}}"  @selected( (old('to')) == $participant->id ) > {{$participant->email}} </option>
                                                     @empty
-                                                    @endforelse
-                                                    {{-- @forelse ($admins as $admin)
+                                                    @endforelse --}}
+                                                    @forelse ($admins as $admin)
                                                     <option value="{{$admin->email}}"  @selected( (old('to')) == $admin->id ) > {{$admin->email}} </option>
                                                     @empty
-                                                    @endforelse --}}
+                                                    @endforelse
                                                 </select>
-
                                             <!--begin::CC & BCC buttons-->
                                             {{-- <div class="ms-auto w-75px text-end">
                                                 <span class="text-muted fs-bold cursor-pointer text-hover-primary me-2" data-kt-inbox-form="cc_button">Cc</span>

@@ -35,6 +35,9 @@ return[
     'meals' => 'الوجات',
     'add meal' => 'اضافة وجبة',
     'messages' => 'الرسائل',
+    'send to admin' => ' ارسال للأدمين',
+    'send to participant' => 'ارسال للمشاركين',
+    'send to coach' => 'ارسال للمدربين',
     'send' => 'ارسال',
 
 ];
