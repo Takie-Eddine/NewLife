@@ -26,7 +26,7 @@ class Plan extends Model
 
 
     public function program(){
-        return $this->belongsTo(program::class);
+        return $this->belongsTo(Program::class);
     }
 
     public function services(){
