@@ -38,7 +38,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/../../public_html/newlifedashboard.life-nvst.com'),
+            'root' => storage_path('app/../../public_html/newlifedashboard.life-nvst.com'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
