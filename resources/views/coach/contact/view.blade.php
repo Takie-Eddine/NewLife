@@ -71,7 +71,7 @@
                                 <!--begin::Card toolbar-->
                                 <div class="card-toolbar gap-3">
                                     <!--begin::Chat-->
-                                    <button class="btn btn-sm btn-light btn-active-light-primary" data-kt-drawer-show="true" data-kt-drawer-target="#kt_drawer_chat">
+                                    <a href="{{route('coach.chats')}}" class="btn btn-sm btn-light btn-active-light-primary">
                                     <i class="ki-duotone ki-message-text-2 fs-2">
                                         <span class="path1"></span>
                                         <span class="path2"></span>

@@ -331,7 +331,7 @@
                                 <table class="table table-hover table-row-dashed fs-6 gy-5 my-0" >
                                     <thead class="d-none">
                                         <tr>
-                                            <th class="min-w-5px">Actions</th>
+                                            <th ></th>
                                             <th>Author</th>
                                             <th>Title</th>
                                             <th>Date</th>
@@ -340,16 +340,10 @@
                                     <tbody>
                                         @forelse ($messages as $message)
                                             <tr>
-                                                <td class="min-w-5px">
+                                                <td>
                                                     <!--begin::Star-->
-                                                    <a href="{{route('admin.messages.view',$message->id)}}" class="btn btn-icon btn-color-gray-400 btn-active-color-primary w-35px h-35px" data-bs-toggle="tooltip" data-bs-placement="right" title="Delete">
-                                                        <i class="ki-duotone ki-trash ">
-                                                            <i class="path1"></i>
-                                                            <i class="path2"></i>
-                                                            <i class="path3"></i>
-                                                            <i class="path4"></i>
-                                                            <i class="path5"></i>
-                                                        </i>
+                                                    <a href="{{route('admin.messages.view',$message->id)}}" class="btn btn-icon btn-color-gray-400 btn-active-color-primary w-35px h-35px" data-bs-toggle="tooltip" data-bs-placement="right" title="">
+
                                                     </a>
                                                     <!--end::Star-->
                                                 </td>
@@ -357,7 +351,7 @@
                                                     <a href="{{route('admin.messages.view',$message->id)}}" class="d-flex align-items-center text-dark">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px me-3">
-                                                            @if (Auth::user()->id == $message->reciver_id)
+                                                            @if (Auth::user()->email == $message->reciver_email)
                                                                 <div class="symbol-label bg-light-success">
                                                                     <span class="text-success">R</span>
                                                                 </div>

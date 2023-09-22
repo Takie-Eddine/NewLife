@@ -43,7 +43,7 @@
                                 </svg>
                             </span>
                         </span>
-                        <a class="menu-link" href="{{route('admin.dashboard')}}">
+                        <a class="menu-link" href="{{route('coach.dashboard')}}">
                             <span class="menu-title">{{__('sidebar.dashboard')}}</span>
                         </a>
                     </span>
@@ -335,43 +335,15 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.chats')}}">
+                            <a class="menu-link" href="{{route('coach.chats')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Private Chat</span>
+                                <span class="menu-title">{{__('sidebar.chat')}}</span>
                             </a>
-                            <!--end:Menu link-->
                         </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/chat/group.html">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Group Chat</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/chat/drawer.html">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Drawer Chat</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
                     </div>
-                    <!--end:Menu sub-->
                 </div>
-
 
                 <div class="menu-item">
                     <!--begin:Menu link-->

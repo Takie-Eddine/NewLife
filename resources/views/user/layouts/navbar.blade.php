@@ -4770,7 +4770,7 @@
                     <!--begin::Menu wrapper-->
                     <div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                         @if (Auth::user('web')->profile->photo)
-                                        <img alt="user" src="{{asset('images/profile/'.Auth::user('web')->profile->photo)}}" />
+                                        <img alt="user" src="{{asset('images/participant/'.Auth::user('web')->profile->photo)}}" />
                                     @else
                                         <img alt="user" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
                                     @endif
@@ -4783,7 +4783,7 @@
                                 <!--begin::Avatar-->
                                 <div class="symbol symbol-50px me-5">
                                     @if (Auth::user('web')->profile->photo)
-                                        <img alt="Logo" src="{{asset('images/profile/'.Auth::user('web')->profile->photo)}}" />
+                                        <img alt="Logo" src="{{asset('images/participant/'.Auth::user('web')->profile->photo)}}" />
                                     @else
                                         <img alt="Logo" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
                                     @endif
@@ -4792,7 +4792,7 @@
                                 <!--begin::Username-->
                                 <div class="d-flex flex-column">
                                     <div class="fw-bold d-flex align-items-center fs-5">{{Auth::user('web')->name}}
-                                    <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">{{Auth::user('web')->plan->name}}</span></div>
+                                    <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">{{Auth::user('web')->plan->name ?? ''}}</span></div>
                                     <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{Auth::user('web')->email}}</a>
                                 </div>
                                 <!--end::Username-->

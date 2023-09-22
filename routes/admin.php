@@ -190,20 +190,19 @@ Route::group(
 
             });
 
-            Route::group(['prefix'=>'chat'  ],function(){
-                Route::get('/', [ChatController::class, 'index'])->name('chats');
-                Route::get('/create', [ChatController::class, 'create'])->name('chats.create');
-                Route::post('/store', [ChatController::class, 'store'])->name('chats.store');
-                Route::get('/view/{id}', [ChatController::class, 'view'])->name('chats.view');
-                Route::get('/send', [ChatController::class, 'send'])->name('chats.send');
-            });
+            // Route::group(['prefix'=>'chat'  ],function(){
+            //     Route::get('/', [ChatController::class, 'index'])->name('chats');
+            //     Route::get('/create-admin/{id}', [ChatController::class, 'create_admin'])->name('chats.create_admin');
+            //     Route::get('/create-coach/{id}', [ChatController::class, 'create_coach'])->name('chats.create_coach');
+            //     Route::get('/create-user/{id}', [ChatController::class, 'create_user'])->name('chats.create_user');
+            // });
 
             Route::group(['prefix'=>'calender'  ],function(){
                 Route::get('/', [CalenderController::class, 'index'])->name('calenders');
-                Route::get('/create', [CalenderController::class, 'create'])->name('calenders.create');
+                //Route::get('/create', [CalenderController::class, 'create'])->name('calenders.create');
                 Route::post('/store', [CalenderController::class, 'store'])->name('calenders.store');
-                Route::get('/view/{id}', [CalenderController::class, 'view'])->name('calenders.view');
-                Route::get('/send', [CalenderController::class, 'send'])->name('calenders.send');
+                Route::patch('/update/{id}', [CalenderController::class, 'update'])->name('calenders.update');
+                Route::delete('/destroy/{id}', [CalenderController::class, 'destroy'])->name('calenders.destroy');
             });
 
 

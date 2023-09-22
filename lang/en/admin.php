@@ -248,4 +248,8 @@ return [
     'contacts' => 'Contacts',
     'search contacts' => 'Search Contacts',
     'view & reply' => 'View & Reply',
+    'search person' => 'Search Person',
+    'you' => 'You',
+    'conversation' => 'Conversation',
+    'enter your text' => 'Enter Your Text',
 ];

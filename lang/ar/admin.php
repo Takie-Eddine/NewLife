@@ -247,6 +247,10 @@ return [
     'contact list' => 'قائمة التواصل',
     'contacts' => 'التواصل',
     'search contacts' => 'البحث عن التواصل',
-    'view & reply' => 'عرض ورد'
+    'view & reply' => 'عرض ورد',
+    'search person' => ' البحث عن الشخص',
+    'you' => 'انت',
+    'conversation' => 'المحادثة',
+    'enter your text' => 'ادخل النص',
 
 ];

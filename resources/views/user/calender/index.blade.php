@@ -1,4 +1,4 @@
-@extends('coach.layouts.coach')
+@extends('user.layouts.user')
 
 
 @section('title', 'Specialist')
@@ -135,6 +135,7 @@
             navLinks: true,
             selectable: true,
             selectMirror: true,
+
             // select: function(selectionInfo){
             //     $('#kt_modal_add_event').modal('toggle');
 

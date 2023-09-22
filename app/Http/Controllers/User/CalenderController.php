@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Coach;
+namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Calendar;
@@ -24,6 +24,6 @@ class CalenderController extends Controller
         }
 
 
-        return view('coach.calender.index',compact('events'));
+        return view('user.calender.index',compact('events'));
     }
 }

@@ -17,4 +17,10 @@ class FoodController extends Controller
         return view('coach.food.index',compact('foods'));
 
     }
+
+    public function view($id){
+        $food = Food::findOrFail($id);
+
+        return view('coach.food.view',compact('food'));
+    }
 }

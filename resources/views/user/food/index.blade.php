@@ -1,4 +1,4 @@
-@extends('coach.layouts.coach')
+@extends('user.layouts.user')
 
 
 @section('title', 'Food')
@@ -22,7 +22,7 @@
                     <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">{{__('admin.food')}}</h1>
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('coach.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <li class="breadcrumb-item">
                             <span class="bullet bg-gray-400 w-5px h-2px"></span>
@@ -56,7 +56,7 @@
                                 @empty
                                 @endforelse
                                 <div class="card-footer flex-wrap pt-0">
-                                    <a href="{{route('coach.foods.view',$food->id)}}" class="btn btn-light btn-active-primary my-1 me-2">{{__('admin.view food')}}</a>
+                                    <a href="{{route('user.foods.view',$food->id)}}" class="btn btn-light btn-active-primary my-1 me-2">{{__('admin.view food')}}</a>
                                 </div>
                             </div>
                         </div>

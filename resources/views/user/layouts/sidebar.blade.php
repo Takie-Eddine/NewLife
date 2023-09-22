@@ -269,14 +269,14 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.messages')}}">
+                            <a class="menu-link" href="{{route('user.messages')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Messages</span>
-                                <span class="menu-badge">
+                                <span class="menu-title">{{__('sidebar.messages')}}</span>
+                                {{-- <span class="menu-badge">
                                     <span class="badge badge-success">3</span>
-                                </span>
+                                </span> --}}
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -284,11 +284,11 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="{{route('admin.messages.create')}}">
+                            <a class="menu-link" href="{{route('user.messages.create')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Send</span>
+                                <span class="menu-title">{{__('sidebar.send to coach')}}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -296,11 +296,11 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/inbox/reply.html">
+                            <a class="menu-link" href="{{route('user.messages.createadmin')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">View & Reply</span>
+                                <span class="menu-title">{{__('sidebar.send to admin')}}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
@@ -333,39 +333,14 @@
                         <!--begin:Menu item-->
                         <div class="menu-item">
                             <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/chat/private.html">
+                            <a class="menu-link" href="{{route('user.chats')}}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span>
-                                <span class="menu-title">Private Chat</span>
+                                <span class="menu-title">{{__('sidebar.chat')}}</span>
                             </a>
                             <!--end:Menu link-->
                         </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/chat/group.html">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Group Chat</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
-                        <!--begin:Menu item-->
-                        <div class="menu-item">
-                            <!--begin:Menu link-->
-                            <a class="menu-link" href="../../demo1/dist/apps/chat/drawer.html">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span>
-                                <span class="menu-title">Drawer Chat</span>
-                            </a>
-                            <!--end:Menu link-->
-                        </div>
-                        <!--end:Menu item-->
                     </div>
                     <!--end:Menu sub-->
                 </div>
@@ -373,7 +348,7 @@
 
                 <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="../../demo1/dist/apps/calendar.html">
+                    <a class="menu-link" href="{{route('user.calenders')}}">
                         <span class="menu-icon">
                             <!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
                             <span class="svg-icon svg-icon-2">

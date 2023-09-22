@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Coach\CalenderController;
+use App\Http\Controllers\Coach\ChatController;
 use App\Http\Controllers\Coach\ContactController;
 use App\Http\Controllers\Coach\DashboardController;
 use App\Http\Controllers\Coach\FacilityController;
@@ -63,7 +64,7 @@ Route::group(
 
             Route::group(['prefix'=>'food'  ],function(){
                 Route::get('/', [FoodController::class, 'index'])->name('foods');
-                // Route::get('/view/{id}', [FoodController::class, 'view'])->name('foods.view');
+                Route::get('/view/{id}', [FoodController::class, 'view'])->name('foods.view');
             });
 
             Route::group(['prefix'=>'message'  ],function(){
@@ -86,6 +87,12 @@ Route::group(
                 Route::get('/', [CalenderController::class, 'index'])->name('calenders');
             });
 
+            Route::group(['prefix'=>'chat'  ],function(){
+                Route::get('/', [ChatController::class, 'index'])->name('chats');
+                Route::get('/create-user/{id}', [ChatController::class, 'create_user'])->name('chats.create_user');
+                Route::get('/conversation/{id}', [ChatController::class, 'conversation'])->name('chats.conversation');
+                Route::post('/store',[ChatController::class, 'store'])->name('chats.store');
+            });
 
 
         });

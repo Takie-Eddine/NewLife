@@ -13,14 +13,14 @@ class CalenderController extends Controller
 {
     public function index(){
 
-        $participants = User::all();
-        $coaches = Coach::all();
-        $events = [];
+
+        $events = array();
         $calendars = Calendar::all();
 
 
         foreach ($calendars as $calendar) {
             $events[] = [
+                'id' => $calendar->id,
                 'title' => $calendar->title,
                 'start' => $calendar->start_date,
                 'end' => $calendar->end_date,
@@ -28,7 +28,7 @@ class CalenderController extends Controller
         }
 
 
-        return view('admin.calender.index',compact('coaches','participants','events'));
+        return view('admin.calender.index',compact('events'));
     }
 
 
@@ -36,39 +36,63 @@ class CalenderController extends Controller
 
     public function store(Request $request){
 
-        return $request ;
+        //return $request ;
 
         $request->validate([
-            'name' => ['required','min:4','string'],
-            'description' => ['required','min:4','string'],
-            'start_date' => ['required','date'],
-            'start_time' => ['required','date_format:H:i'],
-            'end_date' => ['required','date'],
-            'end_time' => ['required','date_format:H:i'],
-            'participants' => ['required',Rule::exists('users','id')],
-            'coaches' => ['required',Rule::exists('coaches','id')],
+            'title' => ['required','min:190','max:x','string'],
+            'description' => ['required','min:4','max:190','string'],
         ]);
 
 
         $calendar = Calendar::create([
-            'name' => $request->name,
+            'title' => $request->title,
             'description' => $request->description,
             'start_date' => $request->start_date,
-            'start_time' => $request->start_time,
             'end_date' => $request->end_date,
-            'end_time' => $request->end_time,
         ]);
 
 
-        $calendar->participants()->sync($request->participants);
-        $calendar->coaches()->sync($request->coaches);
+        return response()->json($calendar);
 
-        toastr()->success('Created successfully!', 'Congrats', ['timeOut' => 5000]);
-        return redirect()->route('admin.calenders');
+
+        // $calendar->participants()->sync($request->participants);
+        // $calendar->coaches()->sync($request->coaches);
+
+        // toastr()->success('Created successfully!', 'Congrats', ['timeOut' => 5000]);
+        // return redirect()->route('admin.calenders');
 
     }
 
-    public function view($id){
+    public function update(Request $request, $id){
+        $calendar = Calendar::find($id);
 
+        if (! $calendar) {
+            return response()->json([
+                'error' => 'Unable to find event'
+            ],404);
+        };
+
+        $calendar->update([
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+        ]);
+
+        return response()->json('Event Updated');
+
+    }
+
+
+    public function destroy($id){
+        $calendar = Calendar::find($id);
+
+        if (! $calendar) {
+            return response()->json([
+                'error' => 'Unable to find event'
+            ],404);
+        };
+
+        $calendar->delete();
+
+        return $id;
     }
 }

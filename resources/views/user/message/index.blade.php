@@ -1,7 +1,7 @@
-@extends('coach.layouts.coach')
+@extends('user.layouts.user')
 
 
-@section('title', 'Coach')
+@section('title', 'Message')
 
 
 @push('style')
@@ -26,7 +26,7 @@
                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                         <!--begin::Item-->
                         <li class="breadcrumb-item text-muted">
-                            <a href="{{route('coach.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
+                            <a href="{{route('user.dashboard')}}" class="text-muted text-hover-primary">{{__('admin.home')}}</a>
                         </li>
                         <!--end::Item-->
                         <!--begin::Item-->
@@ -60,14 +60,14 @@
                             <!--begin::Aside content-->
                             <div class="card-body">
                                 <!--begin::Button-->
-                                {{-- <a href="{{route('coach.messages.create')}}" class="btn btn-primary fw-bold w-100 mb-8">{{__('admin.new message')}}</a> --}}
+                                {{-- <a href="{{route('user.messages.create')}}" class="btn btn-primary fw-bold w-100 mb-8">{{__('admin.new message')}}</a> --}}
                                 <!--end::Button-->
                                 <!--begin::Menu-->
                                 <div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-10">
                                     <!--begin::Menu item-->
                                     <div class="menu-item mb-3">
                                         <!--begin::Inbox-->
-                                        <a class="menu-link " href="{{route('coach.messages')}}">
+                                        <a class="menu-link " href="{{route('user.messages')}}">
                                             <span class="menu-icon">
                                                 <i class="ki-duotone ki-sms fs-2 me-3">
                                                     <span class="path1"></span>
@@ -122,7 +122,7 @@
                                     <!--begin::Menu item-->
                                     <div class="menu-item mb-3">
                                         <!--begin::Sent-->
-                                        <a class="menu-link " href="{{route('coach.messages.send')}}">
+                                        <a class="menu-link " href="{{route('user.messages.send')}}">
                                             <span class="menu-icon">
                                                 <i class="ki-duotone ki-send fs-2 me-3">
                                                     <span class="path1"></span>
@@ -145,7 +145,7 @@
 
                                     <div class="menu-item mb-3">
                                         <!--begin::Sent-->
-                                        <a class="menu-link " href="{{route('coach.messages.recive')}}">
+                                        <a class="menu-link " href="{{route('user.messages.recive')}}">
                                             <span class="menu-icon">
                                                 <i class="ki-duotone ki-tablet-down fs-2 me-3">
                                                     <span class="path1"></span>
@@ -353,7 +353,7 @@
                                                     <!--end::Star-->
                                                 </td>
                                                 <td class="w-150px w-md-175px">
-                                                    <a href="{{route('coach.messages.view',$message->id)}}" class="d-flex align-items-center text-dark">
+                                                    <a href="{{route('user.messages.view',$message->id)}}" class="d-flex align-items-center text-dark">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px me-3">
                                                             @if (Auth::user()->email == $message->reciver_email)
@@ -375,7 +375,7 @@
                                                 <td>
                                                     <div class="text-dark gap-1 pt-2">
                                                         <!--begin::Heading-->
-                                                        <a href="{{route('coach.messages.view',$message->id)}}" class="text-dark">
+                                                        <a href="{{route('user.messages.view',$message->id)}}" class="text-dark">
                                                             <span class="fw-bold">{{$message->subject}}</span>
                                                             <span class="fw-bold d-none d-md-inine">-</span>
                                                             {{-- <span class="d-none d-md-inine text-muted">Thank you for ordering UFC 240 Holloway vs Edgar Alternate camera angles...</span> --}}

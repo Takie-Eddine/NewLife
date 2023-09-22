@@ -567,7 +567,7 @@
                 </div>
 
 
-                <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                {{-- <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                     <!--begin:Menu link-->
                     <span class="menu-link">
                         <span class="menu-icon">
@@ -625,7 +625,7 @@
                         <!--end:Menu item-->
                     </div>
                     <!--end:Menu sub-->
-                </div>
+                </div> --}}
 
 
                 <div class="menu-item">

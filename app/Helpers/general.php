@@ -1,4 +1,9 @@
 <?php
+
+use App\Models\Coach;
+use App\Models\Conversation;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image as Image;
 use Illuminate\Support\Str ;
 use Illuminate\Support\Facades\File;
@@ -30,4 +35,26 @@ if (!function_exists('uploadImage')) {
         }
 
     }
+
+    function getUsers(Conversation $conversation){
+
+        if ($conversation->sender_type == 'coach' && $conversation->sender_type == Auth::guard('coach')->check()) {
+                $reciverUser = User::find($conversation->reciver_id);
+
+        }else{
+
+                $reciverUser = Coach::find($conversation->reciver_id);
+        }
+
+        // if ($conversation->sender_email == Auth::user()->email ) {
+        //     $reciverUser = User::firstwhere('email',$conversation->reciver_email);
+        // }else{
+        //     $reciverUser = Coach::firstwhere('email',$conversation->sender_email);
+        // }
+        return $reciverUser;
+
+    }
+
+
+
 }

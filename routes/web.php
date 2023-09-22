@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\User\CalenderController;
+use App\Http\Controllers\User\ChatController ;
 use App\Http\Controllers\User\CoachController;
 use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\User\DashboardController;
 use App\Http\Controllers\User\FacilityController;
 use App\Http\Controllers\User\FileController;
 use App\Http\Controllers\User\FoodController;
+use App\Http\Controllers\User\MessageController;
 use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -66,6 +69,28 @@ Route::group(
             Route::group(['prefix' =>'contact'], function () {
                 Route::get('/', [ContactController::class, 'index'])->name('contacts');
                 Route::get('/view/{id}', [ContactController::class, 'view'])->name('contacts.view');
+            });
+
+            Route::group(['prefix'=>'chat'  ],function(){
+                Route::get('/', [ChatController::class, 'index'])->name('chats');
+                Route::get('/create-coach/{id}', [ChatController::class, 'create_coach'])->name('chats.create_coach');
+                Route::post('/store',[ChatController::class, 'store'])->name('chats.store');
+            });
+
+            Route::group(['prefix'=>'message'  ],function(){
+                Route::get('/', [MessageController::class, 'index'])->name('messages');
+                Route::get('/create', [MessageController::class, 'create'])->name('messages.create');
+                Route::get('/create-admin', [MessageController::class, 'createadmin'])->name('messages.createadmin');
+                Route::post('/store', [MessageController::class, 'store'])->name('messages.store');
+                Route::post('/store-admin', [MessageController::class, 'storeadmin'])->name('messages.storeadmin');
+                Route::get('/view/{id}', [MessageController::class, 'view'])->name('messages.view');
+                Route::get('/send', [MessageController::class, 'send'])->name('messages.send');
+                Route::get('/recive', [MessageController::class, 'recive'])->name('messages.recive');
+            });
+
+
+            Route::group(['prefix'=>'calender'  ],function(){
+                Route::get('/', [CalenderController::class, 'index'])->name('calenders');
             });
 
         });
