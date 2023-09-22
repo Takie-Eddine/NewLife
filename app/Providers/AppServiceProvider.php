@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191) ;
 
         $this->app->bind('path.public', function (){
-            return base_path().'/../public_html';
+            return base_path().'/../public_html/newlifedashboard.life-nvst.com';
         });
     }
 
