@@ -70,7 +70,7 @@ class ProfileController extends Controller
                 $admin->profile->save();
             }
             $file_name = Str::slug($request->fname).".".$photo->getClientOriginalExtension();
-            $path = storage_path('/images/profile/' .$file_name);
+            $path = public_path('images/profile/' .$file_name);
             Image::make($photo->getRealPath())->resize(500,null,function($constraint){
                 $constraint->aspectRatio();
             })->save($path,100);
