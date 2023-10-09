@@ -44,6 +44,61 @@ return [
             'throw' => false,
         ],
 
+        'coach' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/coach'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'facility' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/facility'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'files' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/files'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'food' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/food'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'logo' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/logo'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'participant' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/participant'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'plan' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/plan'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'profile' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/profile'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+        'program' => [
+            'driver' => 'local',
+            'root' => public_path('/../../public_html/DoshtuDashboard/images/program'),
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

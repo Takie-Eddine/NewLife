@@ -252,5 +252,6 @@ return [
     'you' => 'انت',
     'conversation' => 'المحادثة',
     'enter your text' => 'ادخل النص',
+    'my programs' => 'برامجي',
 
 ];

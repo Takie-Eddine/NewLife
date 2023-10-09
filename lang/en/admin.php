@@ -252,4 +252,5 @@ return [
     'you' => 'You',
     'conversation' => 'Conversation',
     'enter your text' => 'Enter Your Text',
+    'my programs' => 'My Programs',
 ];

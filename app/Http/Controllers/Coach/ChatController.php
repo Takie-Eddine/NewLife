@@ -7,8 +7,10 @@ use App\Models\Chat;
 use App\Models\Coach;
 use App\Models\Conversation;
 use App\Models\User;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class ChatController extends Controller
@@ -67,17 +69,34 @@ class ChatController extends Controller
             'reciver' => ['required', 'email' , Rule::exists('users','email')],
             'conversation_id' => ['required', Rule::exists('conversations','id')],
         ]);
+        try{
+            DB::beginTransaction();
+            if ($request->text == null) {
+                return redirect()->back();
+            }
 
+            $chat = Chat::create([
+                'conversation_id' => $request->conversation_id,
+                'body' => $request->text,
+                'sender_email' => Auth::user()->email,
+                'reciver_email' => $request->reciver,
+            ]);
 
-        $chat = Chat::create([
-            'conversation_id' => $request->conversation_id,
-            'body' => $request->text,
-            'sender_email' => Auth::user()->email,
-            'reciver_email' => $request->reciver,
-        ]);
+            $conversation = Conversation::findOrFail($request->conversation_id);
 
+            $conversation->update([
+                'last_time_message' => $chat->created_at,
+            ]);
 
-        return redirect()->back();
+            DB::commit();
+
+            return redirect()->back();
+
+        }catch(Exception $ex){
+            DB::rollback();
+            return redirect()->back();
+        }
+
 
 
     }

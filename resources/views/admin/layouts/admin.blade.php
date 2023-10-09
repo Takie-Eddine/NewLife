@@ -79,39 +79,7 @@
 			<!--end::Page-->
 		</div>
 		<!--end::App-->
-		<!--begin::Drawers-->
-		<!--begin::Activities drawer-->
-		@include('admin.partials.activities')
-		<!--end::Activities drawer-->
-		<!--begin::Chat drawer-->
-		@include('admin.partials.chat')
-		<!--end::Chat drawer-->
-		<!--begin::Chat drawer-->
-		@include('admin.partials.chat1')
-		<!--end::Chat drawer-->
-		<!--end::Drawers-->
-		<!--begin::Scrolltop-->
-		@include('admin.partials.scrolltop')
-		<!--end::Scrolltop-->
-		<!--begin::Modals-->
-		<!--begin::Modal - Upgrade plan-->
-		@include('admin.partials.modal_upgrade_plan')
-		<!--end::Modal - Upgrade plan-->
-		<!--begin::Modal - Create App-->
-		@include('admin.partials.modal_create_app')
-		<!--end::Modal - Create App-->
-		<!--begin::Modal - New Target-->
-		@include('admin.partials.modal_new_target')
-		<!--end::Modal - New Target-->
-		<!--begin::Modal - View Users-->
-		@include('admin.partials.modal_view_user')
-		<!--begin::Modal - Users Search-->
-		@include('admin.partials.modal_user_search')
-		<!--end::Modal - Users Search-->
-		<!--begin::Modal - Invite Friends-->
-		@include('admin.partials.modal_invite_friend')
 
-        @include('admin.partials.init1')
 
 		<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
 		<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>

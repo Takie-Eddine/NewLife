@@ -120,7 +120,7 @@
                                 <div class="scroll-y me-n5 pe-5 h-300px h-lg-auto" data-kt-element="messages" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_header, #kt_app_header, #kt_app_toolbar, #kt_toolbar, #kt_footer, #kt_app_footer, #kt_chat_messenger_header, #kt_chat_messenger_footer" data-kt-scroll-wrappers="#kt_content, #kt_app_content, #kt_chat_messenger_body" data-kt-scroll-offset="5px">
                                     <!--begin::Message(in)-->
                                     @forelse ($conversation->messages as $message)
-                                        @if ($message->sender_email == Auth::user()->email )
+                                        @if ($message->reciver_email == Auth::user()->email )
                                             <div class="d-flex justify-content-start mb-10">
                                                 <!--begin::Wrapper-->
                                                 <div class="d-flex flex-column align-items-start">
@@ -128,12 +128,12 @@
                                                     <div class="d-flex align-items-center mb-2">
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="{{asset('images/coach/'.$sender->profile->photo)}}" />
+                                                            <img alt="Pic" src="{{asset('images/participant/'.$reciver->profile->photo)}}" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                         <!--begin::Details-->
                                                         <div class="ms-3">
-                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">{{__('admin.you')}}</a>
+                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary me-1">{{$reciver->name}}</a>
                                                             <span class="text-muted fs-7 mb-1">{{$message->created_at->longAbsoluteDiffForHumans()}}</span>
                                                         </div>
                                                         <!--end::Details-->
@@ -155,12 +155,12 @@
                                                         <!--begin::Details-->
                                                         <div class="me-3">
                                                             <span class="text-muted fs-7 mb-1">{{$message->created_at->longAbsoluteDiffForHumans()}}</span>
-                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">{{$sender->name}}</a>
+                                                            <a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary ms-1">{{__('admin.you')}}</a>
                                                         </div>
                                                         <!--end::Details-->
                                                         <!--begin::Avatar-->
                                                         <div class="symbol symbol-35px symbol-circle">
-                                                            <img alt="Pic" src="{{asset('images/participant/'.$reciver->profile->photo)}}" />
+                                                            <img alt="Pic" src="{{asset('images/coach/'.$sender->profile->photo)}}" />
                                                         </div>
                                                         <!--end::Avatar-->
                                                     </div>

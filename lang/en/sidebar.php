@@ -26,7 +26,7 @@ return[
     'add program' => 'Add Program',
     'add plan' => 'Add Plan',
     'admin managment' => 'Admin Managment',
-    'admins' => 'Addmins',
+    'admins' => 'Admins',
     'add admin' => 'Add Admin',
     'roles' => 'Roles',
     'add role' => 'Add Role',

@@ -198,7 +198,16 @@
                                     <div class="card-body d-flex flex-column">
                                         @forelse ($admin->tasks as $task)
                                             <div class="d-flex align-items-center position-relative mb-7">
-                                                <div class="position-absolute top-0 start-0 rounded h-100 bg-secondary w-4px"></div>
+                                                @if ($task->status == 'Pending')
+                                                    <div class="position-absolute top-0 start-0 rounded h-100 bg-warning w-4px"></div>
+                                                @endif
+                                                @if ($task->status == 'In Progress')
+                                                    <div class="position-absolute top-0 start-0 rounded h-100 bg-info w-4px"></div>
+                                                @endif
+                                                @if ($task->status == 'Completed')
+                                                    <div class="position-absolute top-0 start-0 rounded h-100 bg-success w-4px"></div>
+                                                @endif
+
                                                 <div class="fw-semibold ms-5">
                                                     <a href="#" class="fs-5 fw-bold text-dark text-hover-primary">{{$task->name}}</a>
                                                     <div class="fs-7 text-muted">{{$task->created_at->longAbsoluteDiffForHumans()}}
