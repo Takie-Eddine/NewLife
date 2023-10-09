@@ -19,7 +19,7 @@ if (!function_exists('uploadImage')) {
     function uploadImage($photo, $folder, $name)
     {
         $file_name = Str::slug($name).".".$photo->getClientOriginalExtension();
-            $path = public_path('images/'.$folder.'/' .$file_name);
+            $path = public_path($folder.'/' .$file_name);
             Image::make($photo->getRealPath())->resize(500,null,function($constraint){
                 $constraint->aspectRatio();
             })->save($path,100);
