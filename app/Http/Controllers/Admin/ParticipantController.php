@@ -63,6 +63,7 @@ class ParticipantController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' =>  ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'phone' =>  ['required','regex:/^([0-9\s\-\+\(\)]*)$/', Rule::unique('user_profiles','phone')],
             'password' => ['required','string', 'min:8'],
             'fname' => ['nullable' ,'string' , 'max:255'],
             'lname' => ['nullable' ,'string' , 'max:255'],
@@ -173,9 +174,11 @@ class ParticipantController extends Controller
     public function update(Request $request, $id){
 
 
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' =>  ['required', 'string', 'email', 'max:255', Rule::unique('users','email')->ignore($id)],
+            'phone' =>  ['required','regex:/^([0-9\s\-\+\(\)]*)$/', Rule::unique('user_profiles','phone')->ignore($id,'user_id')],
             'password' => ['nullable','string', 'min:8'],
             'fname' => ['nullable' ,'string' , 'max:255'],
             'lname' => ['nullable' ,'string' , 'max:255'],
@@ -246,7 +249,7 @@ class ParticipantController extends Controller
 
             $participant->profile->fill($input)->save();
 
-            $participant->medicalinfos()->update([
+            $participant->medicalinfos()->updateOrCreate([
                 'weight' => $request-> weight,
                 'height' => $request-> height,
                 'blood_type' => $request-> blood_type,

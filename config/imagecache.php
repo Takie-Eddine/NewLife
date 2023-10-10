@@ -32,8 +32,7 @@ return [
 
     'paths' => [
         public_path('upload'),
-        public_path('images'),
-        public_path('/../../public_html/newlifedashboard.life-nvst.com/images'),
+        public_path('images')
     ],
 
     /*
@@ -67,6 +66,6 @@ return [
     |
     */
 
-    'lifetime' => 0,
+    'lifetime' => 43200,
 
 ];

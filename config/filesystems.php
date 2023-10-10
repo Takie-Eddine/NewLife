@@ -44,60 +44,7 @@ return [
             'throw' => false,
         ],
 
-        'coach' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/coach'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'facility' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/facility'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'files' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/files'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'food' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/food'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'logo' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/logo'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'participant' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/participant'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'plan' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/plan'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'profile' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/profile'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
-        'program' => [
-            'driver' => 'local',
-            'root' => public_path('/../../public_html/newlifedashboard.life-nvst.com/images/program'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
+
 
         's3' => [
             'driver' => 's3',
