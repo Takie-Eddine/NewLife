@@ -39,7 +39,7 @@ class CalenderController extends Controller
         //return $request ;
 
         $request->validate([
-            'title' => ['required','min:190','max:x','string'],
+            'title' => ['required','min:4','max:190','string'],
             'description' => ['required','min:4','max:190','string'],
         ]);
 
